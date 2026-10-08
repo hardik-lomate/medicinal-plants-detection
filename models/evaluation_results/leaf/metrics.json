@@ -1,0 +1,481 @@
+{
+  "title": "Leaf Classifier (78 Classes)",
+  "model_path": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\models\\leaf_model.pth",
+  "manifest_path": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\models\\dataset_analysis\\leaf_manifest.csv",
+  "evaluated_at": "2026-10-08T10:23:10.106729",
+  "num_samples": 1094,
+  "top1_accuracy": 0.8592,
+  "top3_accuracy": 0.9653,
+  "macro_f1": 0.8555,
+  "weighted_f1": 0.8588,
+  "per_class": {
+    "Aloevera": {
+      "samples": 19,
+      "precision": 1.0,
+      "recall": 0.8421,
+      "f1": 0.9143
+    },
+    "Amla": {
+      "samples": 11,
+      "precision": 1.0,
+      "recall": 0.9091,
+      "f1": 0.9524
+    },
+    "Amruthaballi": {
+      "samples": 15,
+      "precision": 0.9167,
+      "recall": 0.7333,
+      "f1": 0.8148
+    },
+    "Arali": {
+      "samples": 14,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Ashoka": {
+      "samples": 13,
+      "precision": 0.9231,
+      "recall": 0.9231,
+      "f1": 0.9231
+    },
+    "Astma_weed": {
+      "samples": 13,
+      "precision": 1.0,
+      "recall": 0.8462,
+      "f1": 0.9167
+    },
+    "Badipala": {
+      "samples": 12,
+      "precision": 0.7857,
+      "recall": 0.9167,
+      "f1": 0.8462
+    },
+    "Balloon_Vine": {
+      "samples": 9,
+      "precision": 1.0,
+      "recall": 0.8889,
+      "f1": 0.9412
+    },
+    "Bamboo": {
+      "samples": 19,
+      "precision": 0.9048,
+      "recall": 1.0,
+      "f1": 0.95
+    },
+    "Beans": {
+      "samples": 16,
+      "precision": 1.0,
+      "recall": 0.8125,
+      "f1": 0.8966
+    },
+    "Betel": {
+      "samples": 18,
+      "precision": 0.8333,
+      "recall": 0.8333,
+      "f1": 0.8333
+    },
+    "Bhrami": {
+      "samples": 16,
+      "precision": 0.9375,
+      "recall": 0.9375,
+      "f1": 0.9375
+    },
+    "Bringaraja": {
+      "samples": 12,
+      "precision": 0.75,
+      "recall": 0.75,
+      "f1": 0.75
+    },
+    "Caricature": {
+      "samples": 12,
+      "precision": 1.0,
+      "recall": 0.8333,
+      "f1": 0.9091
+    },
+    "Castor": {
+      "samples": 20,
+      "precision": 0.9091,
+      "recall": 1.0,
+      "f1": 0.9524
+    },
+    "Catharanthus": {
+      "samples": 21,
+      "precision": 0.8,
+      "recall": 0.9524,
+      "f1": 0.8696
+    },
+    "Chakte": {
+      "samples": 11,
+      "precision": 0.8182,
+      "recall": 0.8182,
+      "f1": 0.8182
+    },
+    "Chilly": {
+      "samples": 11,
+      "precision": 0.8889,
+      "recall": 0.7273,
+      "f1": 0.8
+    },
+    "Citron_Lime": {
+      "samples": 16,
+      "precision": 0.9231,
+      "recall": 0.75,
+      "f1": 0.8276
+    },
+    "Coffee": {
+      "samples": 13,
+      "precision": 0.9091,
+      "recall": 0.7692,
+      "f1": 0.8333
+    },
+    "Common_Rue": {
+      "samples": 11,
+      "precision": 0.6875,
+      "recall": 1.0,
+      "f1": 0.8148
+    },
+    "Coriender": {
+      "samples": 18,
+      "precision": 0.9444,
+      "recall": 0.9444,
+      "f1": 0.9444
+    },
+    "Curry": {
+      "samples": 26,
+      "precision": 1.0,
+      "recall": 0.8077,
+      "f1": 0.8936
+    },
+    "Doddpathre": {
+      "samples": 21,
+      "precision": 0.9048,
+      "recall": 0.9048,
+      "f1": 0.9048
+    },
+    "Drumstick": {
+      "samples": 9,
+      "precision": 1.0,
+      "recall": 0.8889,
+      "f1": 0.9412
+    },
+    "Ekka": {
+      "samples": 13,
+      "precision": 1.0,
+      "recall": 0.8462,
+      "f1": 0.9167
+    },
+    "Eucalyptus": {
+      "samples": 12,
+      "precision": 0.7692,
+      "recall": 0.8333,
+      "f1": 0.8
+    },
+    "Ganigale": {
+      "samples": 12,
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.8571
+    },
+    "Ganike": {
+      "samples": 10,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "Gasagase": {
+      "samples": 13,
+      "precision": 0.7,
+      "recall": 0.5385,
+      "f1": 0.6087
+    },
+    "Ginger": {
+      "samples": 13,
+      "precision": 0.6316,
+      "recall": 0.9231,
+      "f1": 0.75
+    },
+    "Globe Amarnath": {
+      "samples": 11,
+      "precision": 0.9167,
+      "recall": 1.0,
+      "f1": 0.9565
+    },
+    "Guava": {
+      "samples": 20,
+      "precision": 0.8889,
+      "recall": 0.8,
+      "f1": 0.8421
+    },
+    "Henna": {
+      "samples": 13,
+      "precision": 0.875,
+      "recall": 0.5385,
+      "f1": 0.6667
+    },
+    "Hibiscus": {
+      "samples": 19,
+      "precision": 0.8571,
+      "recall": 0.6316,
+      "f1": 0.7273
+    },
+    "Honge": {
+      "samples": 15,
+      "precision": 0.7059,
+      "recall": 0.8,
+      "f1": 0.75
+    },
+    "Insulin": {
+      "samples": 14,
+      "precision": 0.9333,
+      "recall": 1.0,
+      "f1": 0.9655
+    },
+    "Jackfruit": {
+      "samples": 17,
+      "precision": 0.6818,
+      "recall": 0.8824,
+      "f1": 0.7692
+    },
+    "Jasmine": {
+      "samples": 8,
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.8889
+    },
+    "Kambajala": {
+      "samples": 10,
+      "precision": 0.9091,
+      "recall": 1.0,
+      "f1": 0.9524
+    },
+    "Kasambruga": {
+      "samples": 8,
+      "precision": 1.0,
+      "recall": 0.875,
+      "f1": 0.9333
+    },
+    "Kohlrabi": {
+      "samples": 12,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Lantana": {
+      "samples": 12,
+      "precision": 0.7692,
+      "recall": 0.8333,
+      "f1": 0.8
+    },
+    "Lemon": {
+      "samples": 19,
+      "precision": 0.8235,
+      "recall": 0.7368,
+      "f1": 0.7778
+    },
+    "Malabar_Nut": {
+      "samples": 9,
+      "precision": 0.5714,
+      "recall": 0.4444,
+      "f1": 0.5
+    },
+    "Malabar_Spinach": {
+      "samples": 13,
+      "precision": 0.75,
+      "recall": 0.6923,
+      "f1": 0.72
+    },
+    "Mango": {
+      "samples": 16,
+      "precision": 0.8235,
+      "recall": 0.875,
+      "f1": 0.8485
+    },
+    "Marigold": {
+      "samples": 15,
+      "precision": 0.8182,
+      "recall": 0.6,
+      "f1": 0.6923
+    },
+    "Mint": {
+      "samples": 21,
+      "precision": 1.0,
+      "recall": 0.8571,
+      "f1": 0.9231
+    },
+    "Neem": {
+      "samples": 21,
+      "precision": 0.85,
+      "recall": 0.8095,
+      "f1": 0.8293
+    },
+    "Nelavembu": {
+      "samples": 15,
+      "precision": 0.7143,
+      "recall": 0.6667,
+      "f1": 0.6897
+    },
+    "Nerale": {
+      "samples": 10,
+      "precision": 0.6667,
+      "recall": 0.6,
+      "f1": 0.6316
+    },
+    "Nooni": {
+      "samples": 12,
+      "precision": 0.6667,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    "Onion": {
+      "samples": 15,
+      "precision": 1.0,
+      "recall": 0.9333,
+      "f1": 0.9655
+    },
+    "Padri": {
+      "samples": 12,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "f1": 0.9231
+    },
+    "Palak_Spinach": {
+      "samples": 23,
+      "precision": 0.9583,
+      "recall": 1.0,
+      "f1": 0.9787
+    },
+    "Papaya": {
+      "samples": 21,
+      "precision": 0.9545,
+      "recall": 1.0,
+      "f1": 0.9767
+    },
+    "Parijatha": {
+      "samples": 11,
+      "precision": 0.9167,
+      "recall": 1.0,
+      "f1": 0.9565
+    },
+    "Pea": {
+      "samples": 8,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Pomoegranate": {
+      "samples": 12,
+      "precision": 0.8571,
+      "recall": 1.0,
+      "f1": 0.9231
+    },
+    "Pumpkin": {
+      "samples": 15,
+      "precision": 1.0,
+      "recall": 0.9333,
+      "f1": 0.9655
+    },
+    "Raddish": {
+      "samples": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Rose": {
+      "samples": 17,
+      "precision": 1.0,
+      "recall": 0.8824,
+      "f1": 0.9375
+    },
+    "Sampige": {
+      "samples": 10,
+      "precision": 0.8,
+      "recall": 0.8,
+      "f1": 0.8
+    },
+    "Sapota": {
+      "samples": 8,
+      "precision": 0.7143,
+      "recall": 0.625,
+      "f1": 0.6667
+    },
+    "Seethaashoka": {
+      "samples": 8,
+      "precision": 0.6667,
+      "recall": 0.75,
+      "f1": 0.7059
+    },
+    "Seethapala": {
+      "samples": 18,
+      "precision": 0.6842,
+      "recall": 0.7222,
+      "f1": 0.7027
+    },
+    "Spinach1": {
+      "samples": 11,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Tamarind": {
+      "samples": 27,
+      "precision": 1.0,
+      "recall": 0.963,
+      "f1": 0.9811
+    },
+    "Taro": {
+      "samples": 11,
+      "precision": 0.8462,
+      "recall": 1.0,
+      "f1": 0.9167
+    },
+    "Tecoma": {
+      "samples": 11,
+      "precision": 0.7333,
+      "recall": 1.0,
+      "f1": 0.8462
+    },
+    "Thumbe": {
+      "samples": 12,
+      "precision": 0.8333,
+      "recall": 0.8333,
+      "f1": 0.8333
+    },
+    "Tomato": {
+      "samples": 10,
+      "precision": 0.9091,
+      "recall": 1.0,
+      "f1": 0.9524
+    },
+    "Tulsi": {
+      "samples": 28,
+      "precision": 0.9091,
+      "recall": 0.7143,
+      "f1": 0.8
+    },
+    "Turmeric": {
+      "samples": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "camphor": {
+      "samples": 11,
+      "precision": 0.8462,
+      "recall": 1.0,
+      "f1": 0.9167
+    },
+    "kamakasturi": {
+      "samples": 11,
+      "precision": 0.5625,
+      "recall": 0.8182,
+      "f1": 0.6667
+    },
+    "kepala": {
+      "samples": 12,
+      "precision": 0.6111,
+      "recall": 0.9167,
+      "f1": 0.7333
+    }
+  }
+}

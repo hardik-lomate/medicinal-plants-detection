@@ -1,0 +1,608 @@
+{
+  "Aloevera": {
+    "normalized_name": "Aloevera",
+    "display_name": "Aloe Vera",
+    "scientific_name": "Aloe barbadensis miller",
+    "database_key": "Aloevera"
+  },
+  "Amla": {
+    "normalized_name": "Amla",
+    "display_name": "Amla (Indian Gooseberry)",
+    "scientific_name": "Phyllanthus emblica",
+    "database_key": "Amla"
+  },
+  "Amruthaballi": {
+    "normalized_name": "Amruthaballi",
+    "display_name": "Amruthaballi (Giloy / Guduchi)",
+    "scientific_name": "Tinospora cordifolia",
+    "database_key": "Amruthaballi"
+  },
+  "Amruta_Balli": {
+    "normalized_name": "Amruthaballi",
+    "display_name": "Amruthaballi (Giloy / Guduchi)",
+    "scientific_name": "Tinospora cordifolia",
+    "database_key": "Amruthaballi"
+  },
+  "Arali": {
+    "normalized_name": "Arali",
+    "display_name": "Arali (Oleander)",
+    "scientific_name": "Nerium oleander",
+    "database_key": "Arali"
+  },
+  "Ashoka": {
+    "normalized_name": "Ashoka",
+    "display_name": "Ashoka",
+    "scientific_name": "Saraca asoca",
+    "database_key": "Ashoka"
+  },
+  "ashoka": {
+    "normalized_name": "Ashoka",
+    "display_name": "Ashoka",
+    "scientific_name": "Saraca asoca",
+    "database_key": "Ashoka"
+  },
+  "Ashwagandha": {
+    "normalized_name": "Ashwagandha",
+    "display_name": "Ashwagandha (Indian Ginseng)",
+    "scientific_name": "Withania somnifera",
+    "database_key": "Ashwagandha"
+  },
+  "Astma_weed": {
+    "normalized_name": "Astma_weed",
+    "display_name": "Asthma Weed",
+    "scientific_name": "Euphorbia hirta",
+    "database_key": "Astma_weed"
+  },
+  "Avacado": {
+    "normalized_name": "Avacado",
+    "display_name": "Avocado",
+    "scientific_name": "Persea americana",
+    "database_key": "Avacado"
+  },
+  "Badipala": {
+    "normalized_name": "Badipala",
+    "display_name": "Badipala (Indian Coral Tree)",
+    "scientific_name": "Erythrina variegata",
+    "database_key": "Badipala"
+  },
+  "Balloon_Vine": {
+    "normalized_name": "Balloon_Vine",
+    "display_name": "Balloon Vine (Mudakathan)",
+    "scientific_name": "Cardiospermum halicacabum",
+    "database_key": "Balloon_Vine"
+  },
+  "Bamboo": {
+    "normalized_name": "Bamboo",
+    "display_name": "Bamboo",
+    "scientific_name": "Bambusa vulgaris",
+    "database_key": "Bamboo"
+  },
+  "Basale": {
+    "normalized_name": "Basale",
+    "display_name": "Basale (Malabar Spinach)",
+    "scientific_name": "Basella alba",
+    "database_key": "Basale"
+  },
+  "Beans": {
+    "normalized_name": "Beans",
+    "display_name": "Beans",
+    "scientific_name": "Phaseolus vulgaris",
+    "database_key": "Beans"
+  },
+  "Betel": {
+    "normalized_name": "Betel",
+    "display_name": "Betel Leaf (Paan)",
+    "scientific_name": "Piper betle",
+    "database_key": "Betel"
+  },
+  "Betel_Nut": {
+    "normalized_name": "Betel_Nut",
+    "display_name": "Betel Nut (Areca Nut / Supari)",
+    "scientific_name": "Areca catechu",
+    "database_key": "Betel_Nut"
+  },
+  "Bhrami": {
+    "normalized_name": "Bhrami",
+    "display_name": "Brahmi (Water Hyssop)",
+    "scientific_name": "Bacopa monnieri",
+    "database_key": "Bhrami"
+  },
+  "Brahmi": {
+    "normalized_name": "Bhrami",
+    "display_name": "Brahmi (Water Hyssop)",
+    "scientific_name": "Bacopa monnieri",
+    "database_key": "Bhrami"
+  },
+  "Bringaraja": {
+    "normalized_name": "Bringaraja",
+    "display_name": "Bhringraj (False Daisy)",
+    "scientific_name": "Eclipta prostrata",
+    "database_key": "Bringaraja"
+  },
+  "Caricature": {
+    "normalized_name": "Caricature",
+    "display_name": "Caricature Plant",
+    "scientific_name": "Graptophyllum pictum",
+    "database_key": "Caricature"
+  },
+  "Castor": {
+    "normalized_name": "Castor",
+    "display_name": "Castor (Arandi)",
+    "scientific_name": "Ricinus communis",
+    "database_key": "Castor"
+  },
+  "Catharanthus": {
+    "normalized_name": "Catharanthus",
+    "display_name": "Catharanthus (Sadabahar / Periwinkle)",
+    "scientific_name": "Catharanthus roseus",
+    "database_key": "Catharanthus"
+  },
+  "Chakte": {
+    "normalized_name": "Chakte",
+    "display_name": "Chakte (White Turmeric / Zedoary)",
+    "scientific_name": "Curcuma zedoaria",
+    "database_key": "Chakte"
+  },
+  "Chilly": {
+    "normalized_name": "Chilly",
+    "display_name": "Chili Pepper",
+    "scientific_name": "Capsicum annuum",
+    "database_key": "Chilly"
+  },
+  "Citron_Lime": {
+    "normalized_name": "Citron_Lime",
+    "display_name": "Citron Lime",
+    "scientific_name": "Citrus medica",
+    "database_key": "Citron_Lime"
+  },
+  "Coffee": {
+    "normalized_name": "Coffee",
+    "display_name": "Coffee Plant",
+    "scientific_name": "Coffea arabica",
+    "database_key": "Coffee"
+  },
+  "Common_Rue": {
+    "normalized_name": "Common_Rue",
+    "display_name": "Common Rue (Naagdalli)",
+    "scientific_name": "Ruta graveolens",
+    "database_key": "Common_Rue"
+  },
+  "Common rue(naagdalli)": {
+    "normalized_name": "Common_Rue",
+    "display_name": "Common Rue (Naagdalli)",
+    "scientific_name": "Ruta graveolens",
+    "database_key": "Common_Rue"
+  },
+  "Nagadali": {
+    "normalized_name": "Common_Rue",
+    "display_name": "Common Rue (Naagdalli)",
+    "scientific_name": "Ruta graveolens",
+    "database_key": "Common_Rue"
+  },
+  "Coriender": {
+    "normalized_name": "Coriender",
+    "display_name": "Coriander (Dhaniya)",
+    "scientific_name": "Coriandrum sativum",
+    "database_key": "Coriender"
+  },
+  "Curry": {
+    "normalized_name": "Curry",
+    "display_name": "Curry Leaf (Kadi Patta)",
+    "scientific_name": "Murraya koenigii",
+    "database_key": "Curry"
+  },
+  "Curry_Leaf": {
+    "normalized_name": "Curry",
+    "display_name": "Curry Leaf (Kadi Patta)",
+    "scientific_name": "Murraya koenigii",
+    "database_key": "Curry"
+  },
+  "Doddapatre": {
+    "normalized_name": "Doddapatre",
+    "display_name": "Doddapatre (Indian Borage / Ajwain Leaves)",
+    "scientific_name": "Coleus amboinicus",
+    "database_key": "Doddapatre"
+  },
+  "Doddpathre": {
+    "normalized_name": "Doddapatre",
+    "display_name": "Doddapatre (Indian Borage / Ajwain Leaves)",
+    "scientific_name": "Coleus amboinicus",
+    "database_key": "Doddapatre"
+  },
+  "Drumstick": {
+    "normalized_name": "Drumstick",
+    "display_name": "Drumstick (Moringa / Sahjan)",
+    "scientific_name": "Moringa oleifera",
+    "database_key": "Drumstick"
+  },
+  "Ekka": {
+    "normalized_name": "Ekka",
+    "display_name": "Ekka (Crown Flower / Madar)",
+    "scientific_name": "Calotropis gigantea",
+    "database_key": "Ekka"
+  },
+  "Eucalyptus": {
+    "normalized_name": "Eucalyptus",
+    "display_name": "Eucalyptus (Nilgiri)",
+    "scientific_name": "Eucalyptus globulus",
+    "database_key": "Eucalyptus"
+  },
+  "Ganigale": {
+    "normalized_name": "Ganike",
+    "display_name": "Ganike (Black Nightshade / Makoy)",
+    "scientific_name": "Solanum nigrum",
+    "database_key": "Ganike"
+  },
+  "Ganike": {
+    "normalized_name": "Ganike",
+    "display_name": "Ganike (Black Nightshade / Makoy)",
+    "scientific_name": "Solanum nigrum",
+    "database_key": "Ganike"
+  },
+  "Gasagase": {
+    "normalized_name": "Gasagase",
+    "display_name": "Gasagase (Poppy Plant)",
+    "scientific_name": "Papaver somniferum",
+    "database_key": "Gasagase"
+  },
+  "Geranium": {
+    "normalized_name": "Geranium",
+    "display_name": "Rose Geranium",
+    "scientific_name": "Pelargonium graveolens",
+    "database_key": "Geranium"
+  },
+  "Ginger": {
+    "normalized_name": "Ginger",
+    "display_name": "Ginger (Adrak)",
+    "scientific_name": "Zingiber officinale",
+    "database_key": "Ginger"
+  },
+  "Globe Amarnath": {
+    "normalized_name": "Globe Amarnath",
+    "display_name": "Globe Amaranth",
+    "scientific_name": "Gomphrena globosa",
+    "database_key": "Globe Amarnath"
+  },
+  "Guava": {
+    "normalized_name": "Guava",
+    "display_name": "Guava (Amrood)",
+    "scientific_name": "Psidium guajava",
+    "database_key": "Guava"
+  },
+  "Gauva": {
+    "normalized_name": "Guava",
+    "display_name": "Guava (Amrood)",
+    "scientific_name": "Psidium guajava",
+    "database_key": "Guava"
+  },
+  "Henna": {
+    "normalized_name": "Henna",
+    "display_name": "Henna (Mehendi)",
+    "scientific_name": "Lawsonia inermis",
+    "database_key": "Henna"
+  },
+  "Hibiscus": {
+    "normalized_name": "Hibiscus",
+    "display_name": "Hibiscus (Gudhal)",
+    "scientific_name": "Hibiscus rosa-sinensis",
+    "database_key": "Hibiscus"
+  },
+  "Honge": {
+    "normalized_name": "Honge",
+    "display_name": "Honge (Indian Beech / Karanja)",
+    "scientific_name": "Pongamia pinnata",
+    "database_key": "Honge"
+  },
+  "Insulin": {
+    "normalized_name": "Insulin",
+    "display_name": "Insulin Plant (Costus Igneus)",
+    "scientific_name": "Chamaecostus cuspidatus",
+    "database_key": "Insulin"
+  },
+  "Jackfruit": {
+    "normalized_name": "Jackfruit",
+    "display_name": "Jackfruit (Kathal)",
+    "scientific_name": "Artocarpus heterophyllus",
+    "database_key": "Jackfruit"
+  },
+  "Jasmine": {
+    "normalized_name": "Jasmine",
+    "display_name": "Jasmine (Chameli)",
+    "scientific_name": "Jasminum officinale",
+    "database_key": "Jasmine"
+  },
+  "Kambajala": {
+    "normalized_name": "Kambajala",
+    "display_name": "Kambajala",
+    "scientific_name": "Gardenia gummifera",
+    "database_key": "Kambajala"
+  },
+  "Kasambruga": {
+    "normalized_name": "Kasambruga",
+    "display_name": "Kasambruga",
+    "scientific_name": "Gardenia resinifera",
+    "database_key": "Kasambruga"
+  },
+  "Kohlrabi": {
+    "normalized_name": "Kohlrabi",
+    "display_name": "Kohlrabi (Knol Khol / Ganth Gobi)",
+    "scientific_name": "Brassica oleracea var. gongylodes",
+    "database_key": "Kohlrabi"
+  },
+  "Lantana": {
+    "normalized_name": "Lantana",
+    "display_name": "Lantana (Ghaneri)",
+    "scientific_name": "Lantana camara",
+    "database_key": "Lantana"
+  },
+  "Lemon": {
+    "normalized_name": "Lemon",
+    "display_name": "Lemon (Nimbu)",
+    "scientific_name": "Citrus limon",
+    "database_key": "Lemon"
+  },
+  "Lemongrass": {
+    "normalized_name": "Lemongrass",
+    "display_name": "Lemongrass",
+    "scientific_name": "Cymbopogon citratus",
+    "database_key": "Lemongrass"
+  },
+  "Lemon_grass": {
+    "normalized_name": "Lemongrass",
+    "display_name": "Lemongrass",
+    "scientific_name": "Cymbopogon citratus",
+    "database_key": "Lemongrass"
+  },
+  "Malabar_Nut": {
+    "normalized_name": "Malabar_Nut",
+    "display_name": "Malabar Nut (Adhatoda / Vasaka)",
+    "scientific_name": "Justicia adhatoda",
+    "database_key": "Malabar_Nut"
+  },
+  "Malabar_Spinach": {
+    "normalized_name": "Malabar_Spinach",
+    "display_name": "Malabar Spinach",
+    "scientific_name": "Basella alba",
+    "database_key": "Malabar_Spinach"
+  },
+  "Mango": {
+    "normalized_name": "Mango",
+    "display_name": "Mango (Aam)",
+    "scientific_name": "Mangifera indica",
+    "database_key": "Mango"
+  },
+  "Marigold": {
+    "normalized_name": "Marigold",
+    "display_name": "Marigold (Genda)",
+    "scientific_name": "Tagetes erecta",
+    "database_key": "Marigold"
+  },
+  "Mint": {
+    "normalized_name": "Mint",
+    "display_name": "Mint (Pudina)",
+    "scientific_name": "Mentha spicata",
+    "database_key": "Mint"
+  },
+  "Neem": {
+    "normalized_name": "Neem",
+    "display_name": "Neem (Indian Lilac)",
+    "scientific_name": "Azadirachta indica",
+    "database_key": "Neem"
+  },
+  "Nelavembu": {
+    "normalized_name": "Nelavembu",
+    "display_name": "Nelavembu (Kalmegh / King of Bitters)",
+    "scientific_name": "Andrographis paniculata",
+    "database_key": "Nelavembu"
+  },
+  "Nerale": {
+    "normalized_name": "Nerale",
+    "display_name": "Nerale (Jamun / Black Plum)",
+    "scientific_name": "Syzygiym cumini",
+    "database_key": "Nerale"
+  },
+  "Nithyapushpa": {
+    "normalized_name": "Catharanthus",
+    "display_name": "Nithyapushpa (Sadabahar)",
+    "scientific_name": "Catharanthus roseus",
+    "database_key": "Catharanthus"
+  },
+  "Nooni": {
+    "normalized_name": "Nooni",
+    "display_name": "Noni (Indian Mulberry)",
+    "scientific_name": "Morinda citrifolia",
+    "database_key": "Nooni"
+  },
+  "Onion": {
+    "normalized_name": "Onion",
+    "display_name": "Onion (Pyaz)",
+    "scientific_name": "Allium cepa",
+    "database_key": "Onion"
+  },
+  "Padri": {
+    "normalized_name": "Padri",
+    "display_name": "Padri (Stereospermum)",
+    "scientific_name": "Stereospermum chelonoides",
+    "database_key": "Padri"
+  },
+  "Palak_Spinach": {
+    "normalized_name": "Palak_Spinach",
+    "display_name": "Palak Spinach",
+    "scientific_name": "Spinacia oleracea",
+    "database_key": "Palak_Spinach"
+  },
+  "Papaya": {
+    "normalized_name": "Papaya",
+    "display_name": "Papaya (Papita)",
+    "scientific_name": "Carica papaya",
+    "database_key": "Papaya"
+  },
+  "Pappaya": {
+    "normalized_name": "Papaya",
+    "display_name": "Papaya (Papita)",
+    "scientific_name": "Carica papaya",
+    "database_key": "Papaya"
+  },
+  "Parijatha": {
+    "normalized_name": "Parijatha",
+    "display_name": "Parijata (Night-flowering Jasmine / Harsingar)",
+    "scientific_name": "Nyctanthes arbor-tristis",
+    "database_key": "Parijatha"
+  },
+  "Pea": {
+    "normalized_name": "Pea",
+    "display_name": "Pea (Matar)",
+    "scientific_name": "Pisum sativum",
+    "database_key": "Pea"
+  },
+  "Pepper": {
+    "normalized_name": "Pepper",
+    "display_name": "Black Pepper (Kali Mirch)",
+    "scientific_name": "Piper nigrum",
+    "database_key": "Pepper"
+  },
+  "Pomegranate": {
+    "normalized_name": "Pomegranate",
+    "display_name": "Pomegranate (Anar)",
+    "scientific_name": "Punica granatum",
+    "database_key": "Pomegranate"
+  },
+  "Pomoegranate": {
+    "normalized_name": "Pomegranate",
+    "display_name": "Pomegranate (Anar)",
+    "scientific_name": "Punica granatum",
+    "database_key": "Pomegranate"
+  },
+  "Pumpkin": {
+    "normalized_name": "Pumpkin",
+    "display_name": "Pumpkin (Kaddu)",
+    "scientific_name": "Cucurbita moschata",
+    "database_key": "Pumpkin"
+  },
+  "Raddish": {
+    "normalized_name": "Raddish",
+    "display_name": "Radish (Mooli)",
+    "scientific_name": "Raphanus sativus",
+    "database_key": "Raddish"
+  },
+  "Raktachandini": {
+    "normalized_name": "Raktachandini",
+    "display_name": "Raktachandana (Red Sandalwood)",
+    "scientific_name": "Pterocarpus santalinus",
+    "database_key": "Raktachandini"
+  },
+  "Rose": {
+    "normalized_name": "Rose",
+    "display_name": "Rose (Gulab)",
+    "scientific_name": "Rosa damascena",
+    "database_key": "Rose"
+  },
+  "Sampige": {
+    "normalized_name": "Sampige",
+    "display_name": "Sampige (Golden Champa)",
+    "scientific_name": "Magnolia champaca",
+    "database_key": "Sampige"
+  },
+  "Sapota": {
+    "normalized_name": "Sapota",
+    "display_name": "Sapota (Chikoo)",
+    "scientific_name": "Manilkara zapota",
+    "database_key": "Sapota"
+  },
+  "Seethaashoka": {
+    "normalized_name": "Ashoka",
+    "display_name": "Sita Ashoka",
+    "scientific_name": "Saraca asoca",
+    "database_key": "Ashoka"
+  },
+  "Seethapala": {
+    "normalized_name": "Seethapala",
+    "display_name": "Seethapala (Custard Apple / Sharifa)",
+    "scientific_name": "Annona squamosa",
+    "database_key": "Seethapala"
+  },
+  "Spinach1": {
+    "normalized_name": "Palak_Spinach",
+    "display_name": "Spinach",
+    "scientific_name": "Spinacia oleracea",
+    "database_key": "Palak_Spinach"
+  },
+  "Tamarind": {
+    "normalized_name": "Tamarind",
+    "display_name": "Tamarind (Imli)",
+    "scientific_name": "Tamarindus indica",
+    "database_key": "Tamarind"
+  },
+  "Taro": {
+    "normalized_name": "Taro",
+    "display_name": "Taro (Arbi)",
+    "scientific_name": "Colocasia esculenta",
+    "database_key": "Taro"
+  },
+  "Tecoma": {
+    "normalized_name": "Tecoma",
+    "display_name": "Tecoma (Yellow Bells)",
+    "scientific_name": "Tecoma stans",
+    "database_key": "Tecoma"
+  },
+  "Thumbe": {
+    "normalized_name": "Thumbe",
+    "display_name": "Thumbe (Dronapushpi)",
+    "scientific_name": "Leucas aspera",
+    "database_key": "Thumbe"
+  },
+  "Tomato": {
+    "normalized_name": "Tomato",
+    "display_name": "Tomato (Tamatar)",
+    "scientific_name": "Solanum lycopersicum",
+    "database_key": "Tomato"
+  },
+  "Tulsi": {
+    "normalized_name": "Tulsi",
+    "display_name": "Tulsi (Holy Basil)",
+    "scientific_name": "Ocimum tenuiflorum",
+    "database_key": "Tulsi"
+  },
+  "tulsi": {
+    "normalized_name": "Tulsi",
+    "display_name": "Tulsi (Holy Basil)",
+    "scientific_name": "Ocimum tenuiflorum",
+    "database_key": "Tulsi"
+  },
+  "Tulasi": {
+    "normalized_name": "Tulsi",
+    "display_name": "Tulsi (Holy Basil)",
+    "scientific_name": "Ocimum tenuiflorum",
+    "database_key": "Tulsi"
+  },
+  "Turmeric": {
+    "normalized_name": "Turmeric",
+    "display_name": "Turmeric (Haldi)",
+    "scientific_name": "Curcuma longa",
+    "database_key": "Turmeric"
+  },
+  "Wood_sorel": {
+    "normalized_name": "Wood_sorel",
+    "display_name": "Wood Sorrel (Changeri)",
+    "scientific_name": "Oxalis corniculata",
+    "database_key": "Wood_sorel"
+  },
+  "camphor": {
+    "normalized_name": "camphor",
+    "display_name": "Camphor Tree (Kapur)",
+    "scientific_name": "Cinnamomum camphora",
+    "database_key": "camphor"
+  },
+  "kamakasturi": {
+    "normalized_name": "kamakasturi",
+    "display_name": "Kamakasturi (Sweet Basil / Sabja)",
+    "scientific_name": "Ocimum basilicum",
+    "database_key": "kamakasturi"
+  },
+  "kepala": {
+    "normalized_name": "kepala",
+    "display_name": "Kepala (Ixora / Jungle Geranium)",
+    "scientific_name": "Ixora coccinea",
+    "database_key": "kepala"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-07T22:00:51.178020",
+  "num_classes": 2,
+  "class_names": [
+    "leaf",
+    "whole_plant"
+  ],
+  "class_details": [
+    {
+      "class_index": 0,
+      "class_name": "leaf",
+      "source": "Datasets_Leaf"
+    },
+    {
+      "class_index": 1,
+      "class_name": "whole_plant",
+      "source": "Datasets_Plant"
+    }
+  ],
+  "index_to_class": {
+    "0": "leaf",
+    "1": "whole_plant"
+  },
+  "class_to_index": {
+    "leaf": 0,
+    "whole_plant": 1
+  }
+}

@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantScope — Botanical Computer Vision & Species Identification</title>
+    <meta name="description" content="Professional botanical computer vision platform for plant species identification and verified pharmacological monograph retrieval.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Top System Notice -->
+    <aside class="system-disclaimer" role="note" aria-label="Educational Disclaimer">
+        <div class="site-width disclaimer-inner">
+            <span class="disclaimer-badge">Notice</span>
+            <p class="disclaimer-text">
+                This identification system is developed for educational and botanical research purposes only. Automated computer-vision outputs must not be used for unsupervised foraging or medical treatment.
+            </p>
+        </div>
+    </aside>
+
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <div class="site-width header-inner">
+            <a href="#" class="brand-link" aria-label="PlantScope Home">
+                <span class="brand-icon">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2Z"/>
+                        <path d="M12 6c-3.314 0-6 2.686-6 6 0 4.418 6 10 6 10s6-5.582 6-10c0-3.314-2.686-6-6-6Z"/>
+                        <circle cx="12" cy="12" r="2"/>
+                    </svg>
+                </span>
+                <span class="brand-name">PlantScope</span>
+                <span class="brand-version">v3.2</span>
+            </a>
+
+            <nav class="main-nav" aria-label="Main Navigation">
+                <a href="#workspace" class="nav-link active">Identify</a>
+                <a href="#how-it-works" class="nav-link">How it works</a>
+                <button type="button" id="browse-species-btn" class="nav-link nav-btn-link">Species catalog (90)</button>
+                <a href="#about" class="nav-link">About</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#workspace" class="btn btn-secondary btn-sm">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                        <circle cx="12" cy="13" r="4"/>
+                    </svg>
+                    <span>New capture</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="site-width hero-grid">
+                <div class="hero-content">
+                    <div class="eyebrow-tag">
+                        <span class="dot-indicator"></span>
+                        <span>Botanical Computer Vision</span>
+                    </div>
+                    <h1 class="hero-title">Identify plants with a photograph.</h1>
+                    <p class="hero-description">
+                        Capture a plant or leaf photograph to analyze its morphological characteristics, determine species identity, and consult verified pharmacological and botanical monographs.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#workspace" class="btn btn-primary" id="hero-start-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="m10 8 4 4-4 4"/>
+                            </svg>
+                            <span>Identify a plant</span>
+                        </a>
+                        <a href="#how-it-works" class="btn btn-secondary">How it works</a>
+                    </div>
+                    <div class="hero-metrics">
+                        <div class="metric-item">
+                            <span class="metric-num">90</span>
+                            <span class="metric-label">Cataloged species</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-num">2-Stage</span>
+                            <span class="metric-label">Neural pipeline</span>
+                        </div>
+                        <div class="metric-divider"></div>
+                        <div class="metric-item">
+                            <span class="metric-num">12.8k</span>
+                            <span class="metric-label">Reference specimens</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="specimen-card-frame">
+                        <div class="specimen-card-header">
+                            <span class="card-tag">Reference Specimen</span>
+                            <span class="specimen-id">ACC-04829</span>
+                        </div>
+                        <div class="specimen-image-wrap">
+                            <img src="assets/hero_specimen.jpg" alt="Botanical reference specimen of Tulsi (Ocimum tenuiflorum)" class="specimen-img">
+                            <div class="specimen-crosshair"></div>
+                        </div>
+                        <div class="specimen-metadata">
+                            <div class="specimen-title-row">
+                                <span class="specimen-common">Tulsi</span>
+                                <span class="specimen-scientific">Ocimum tenuiflorum L.</span>
+                            </div>
+                            <div class="specimen-specs">
+                                <div class="spec-col">
+                                    <span class="spec-label">Confidence</span>
+                                    <span class="spec-val">94.2%</span>
+                                </div>
+                                <div class="spec-col">
+                                    <span class="spec-label">Input type</span>
+                                    <span class="spec-val">Leaf close-up</span>
+                                </div>
+                                <div class="spec-col">
+                                    <span class="spec-label">Family</span>
+                                    <span class="spec-val">Lamiaceae</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Identification Workspace -->
+        <section class="workspace-section" id="workspace">
+            <div class="site-width">
+                <div class="section-header-block">
+                    <div>
+                        <h2 class="section-title">Species identification workspace</h2>
+                        <p class="section-subtitle">Select image focus mode, provide an input photograph, and review model inferences.</p>
+                    </div>
+                </div>
+
+                <div class="workspace-grid">
+                    <!-- Left: Input & Capture Panel -->
+                    <div class="workspace-input-panel">
+                        <!-- Mode Selector Bar -->
+                        <div class="control-strip">
+                            <span class="strip-label">Image Focus Mode</span>
+                            <div class="segmented-control" id="focus-segmented-control" role="radiogroup" aria-label="Image Focus Mode">
+                                <button type="button" class="segment-btn active" data-type="auto" role="radio" aria-checked="true">
+                                    Auto-detect
+                                </button>
+                                <button type="button" class="segment-btn" data-type="leaf" role="radio" aria-checked="false">
+                                    Leaf close-up
+                                </button>
+                                <button type="button" class="segment-btn" data-type="whole_plant" role="radio" aria-checked="false">
+                                    Whole plant
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Upload Drop Area (Initial State) -->
+                        <div id="drop-zone" class="drop-zone" tabindex="0" role="button" aria-label="Upload plant image drop area">
+                            <div class="drop-zone-body">
+                                <div class="upload-reticle">
+                                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="17 8 12 3 7 8"/>
+                                        <line x1="12" y1="3" x2="12" y2="15"/>
+                                    </svg>
+                                </div>
+                                <h3 class="drop-title">Select or drop a plant photograph</h3>
+                                <p class="drop-hint">Upload a high-resolution photo or activate the device camera.</p>
+
+                                <div class="drop-actions">
+                                    <label for="upload-input" class="btn btn-primary file-input-label">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                            <polyline points="17 8 12 3 7 8"/>
+                                            <line x1="12" y1="3" x2="12" y2="15"/>
+                                        </svg>
+                                        <span>Choose image file</span>
+                                        <input type="file" id="upload-input" accept="image/png, image/jpeg, image/jpg, image/webp" hidden>
+                                    </label>
+                                    <button type="button" id="take-photo-btn" class="btn btn-secondary">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                                            <circle cx="12" cy="13" r="4"/>
+                                        </svg>
+                                        <span>Use camera</span>
+                                    </button>
+                                </div>
+                                <span class="format-spec">Supports JPG, PNG, WEBP • Max 15MB • Auto-oriented</span>
+                            </div>
+                        </div>
+
+                        <!-- Preview & Analysis Trigger Area -->
+                        <div id="preview-container" class="preview-container hidden">
+                            <div class="preview-frame">
+                                <div class="preview-image-box">
+                                    <img id="image-preview" src="" alt="Selected plant photograph preview" class="preview-img">
+                                    <div class="scan-overlay" id="scan-overlay"></div>
+                                </div>
+                                <div class="preview-meta-bar">
+                                    <span class="preview-tag" id="preview-focus-badge">Mode: Auto-detect</span>
+                                    <span class="preview-filename" id="preview-filename">Photograph loaded</span>
+                                </div>
+                            </div>
+                            <div class="preview-button-row">
+                                <button type="button" id="identify-btn" class="btn btn-primary btn-block">
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"/>
+                                        <path d="m21 21-4.3-4.3"/>
+                                    </svg>
+                                    <span>Analyze photograph</span>
+                                </button>
+                                <button type="button" id="reset-btn" class="btn btn-secondary btn-block">
+                                    Replace image
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Results & Monograph Panel -->
+                    <div class="workspace-output-panel">
+                        <!-- State 0: Idle Placeholder -->
+                        <div id="idle-state" class="idle-placeholder">
+                            <div class="placeholder-icon">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07 19.07 4.93"/>
+                                </svg>
+                            </div>
+                            <h3 class="placeholder-title">Awaiting photograph input</h3>
+                            <p class="placeholder-text">
+                                Upload a specimen photograph or capture one via camera. The model pipeline will detect whether the image represents a leaf or whole plant, evaluate morphological features against 90 trained botanical classes, and retrieve corroborated scientific monographs.
+                            </p>
+                            <div class="pipeline-spec-box">
+                                <div class="pipeline-step-chip">
+                                    <span class="step-num">Stage 1</span>
+                                    <span class="step-name">Image-Type Classifier (Leaf vs Plant)</span>
+                                </div>
+                                <div class="pipeline-step-chip">
+                                    <span class="step-num">Stage 2</span>
+                                    <span class="step-name">Species Morphology Classifier (EfficientNet-B0)</span>
+                                </div>
+                                <div class="pipeline-step-chip">
+                                    <span class="step-num">Stage 3</span>
+                                    <span class="step-name">Botanical Monograph Correlation</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- State 1: Active Analysis Indicator -->
+                        <div id="loading-state" class="analysis-indicator hidden" aria-live="polite">
+                            <div class="indicator-header">
+                                <span class="indicator-dot pulse"></span>
+                                <span class="indicator-title">Analyzing image</span>
+                            </div>
+                            <div class="analysis-progress-track">
+                                <div class="analysis-progress-bar"></div>
+                            </div>
+                            <div class="analysis-steps">
+                                <div class="analysis-step-row active" id="step-row-1">
+                                    <span class="step-tick">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    </span>
+                                    <span class="step-desc">Normalizing image dimensions & color space</span>
+                                </div>
+                                <div class="analysis-step-row active" id="step-row-2">
+                                    <span class="step-tick">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    </span>
+                                    <span class="step-desc">Running image-type classification (leaf vs plant)</span>
+                                </div>
+                                <div class="analysis-step-row active" id="step-row-3">
+                                    <span class="step-tick">
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                                    </span>
+                                    <span class="step-desc">Querying botanical database records</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- State 2: Result Section -->
+                        <div id="result-section" class="result-display hidden">
+                            <!-- Injected by script.js -->
+                            <div id="result-content" class="result-content-body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section-how" id="how-it-works">
+            <div class="site-width">
+                <div class="section-header-block">
+                    <span class="section-kicker">Process</span>
+                    <h2 class="section-title">How the identification pipeline works</h2>
+                    <p class="section-subtitle">A multi-stage computer-vision system designed to minimize cross-morphology misclassification.</p>
+                </div>
+
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-num-badge">01</div>
+                        <h3 class="step-heading">Capture</h3>
+                        <p class="step-copy">
+                            Take a focused photograph of a single leaf or an entire plant. Natural, diffuse lighting and clear venation structure produce optimal classification reliability.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-num-badge">02</div>
+                        <h3 class="step-heading">Classify</h3>
+                        <p class="step-copy">
+                            A Stage 1 classifier routes the image into specialized leaf or whole-plant models, calculating normalized softmax probabilities across 90 botanical species.
+                        </p>
+                    </div>
+
+                    <div class="step-card">
+                        <div class="step-num-badge">03</div>
+                        <h3 class="step-heading">Explore</h3>
+                        <p class="step-copy">
+                            Correlate predictions with verified monographs containing botanical taxonomy, traditional Ayurvedic applications, parts utilized, and contraindications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Inputs Section -->
+        <section class="section-inputs" id="supported-inputs">
+            <div class="site-width">
+                <div class="inputs-comparison-grid">
+                    <div class="input-mode-card">
+                        <div class="mode-card-header">
+                            <span class="mode-pill">Input Type 01</span>
+                            <h3>Leaf close-up</h3>
+                        </div>
+                        <p class="mode-text">
+                            Evaluates vein architecture, margins, serration patterns, apex, and petiole morphology. Recommended for distinguishing closely related species like Tulsi vs Neem.
+                        </p>
+                        <ul class="mode-guidelines">
+                            <li>Center a single primary leaf in frame</li>
+                            <li>Avoid extreme shadows or glare</li>
+                            <li>Capture underside or top surface clearly</li>
+                        </ul>
+                    </div>
+
+                    <div class="input-mode-card">
+                        <div class="mode-card-header">
+                            <span class="mode-pill">Input Type 02</span>
+                            <h3>Whole plant</h3>
+                        </div>
+                        <p class="mode-text">
+                            Analyzes shrub growth habit, branching structures, foliage clustering, and stem texture. Useful for field surveys where individual leaf access is difficult.
+                        </p>
+                        <ul class="mode-guidelines">
+                            <li>Isolate the target specimen from background flora</li>
+                            <li>Include root base and stem structure where visible</li>
+                            <li>Ensure whole plant occupies 70%+ of frame</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Camera Modal -->
+    <div id="camera-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Camera capture dialog">
+        <div class="camera-dialog">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title">Live camera viewfinder</h3>
+                    <p class="modal-subtitle">Center the plant leaf or canopy within the optical reticle.</p>
+                </div>
+                <button type="button" id="close-camera-x" class="btn-icon-close" aria-label="Close camera">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="camera-viewport">
+                <video id="camera-feed" autoplay playsinline muted></video>
+                <div class="viewfinder-grid">
+                    <div class="grid-cross"></div>
+                </div>
+            </div>
+            <div class="camera-actions">
+                <button type="button" id="capture-btn" class="btn btn-primary">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <circle cx="12" cy="12" r="4"/>
+                    </svg>
+                    <span>Capture photo</span>
+                </button>
+                <button type="button" id="close-camera-btn" class="btn btn-secondary">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Species Directory Modal -->
+    <div id="species-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true" aria-label="Species catalog dialog">
+        <div class="directory-dialog">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title">Cataloged botanical species</h3>
+                    <p class="modal-subtitle">Browse all 90 species recognized across the two-stage multi-model botanical pipeline.</p>
+                </div>
+                <button type="button" id="close-species-x" class="btn-icon-close" aria-label="Close directory">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"/>
+                        <line x1="6" y1="6" x2="18" y2="18"/>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="directory-filter-bar">
+                <div class="search-input-wrapper">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="search-icon">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    </svg>
+                    <input type="text" id="species-search-input" placeholder="Search by common name (e.g. Tulsi, Neem) or scientific name..." class="search-field">
+                </div>
+                <div class="filter-chips-row">
+                    <button type="button" class="filter-chip active" data-filter="all">All species (<span id="total-species-count">90</span>)</button>
+                    <button type="button" class="filter-chip" data-filter="medicinal">Medicinal only</button>
+                    <button type="button" class="filter-chip" data-filter="db_ready">Full monograph</button>
+                </div>
+            </div>
+
+            <div class="directory-grid-wrap" id="species-grid">
+                <div class="loading-species-state">Loading catalog entries...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+    <!-- Site Footer -->
+    <footer class="site-footer" id="about">
+        <div class="site-width footer-inner">
+            <div class="footer-col brand-col">
+                <div class="brand-link">
+                    <span class="brand-name">PlantScope</span>
+                </div>
+                <p class="footer-blurb">
+                    High-accuracy botanical computer vision platform for medicinal flora identification. Built with PyTorch, EfficientNet-B0, and corroborating peer-reviewed pharmacological monographs.
+                </p>
+                <span class="copyright">© 2026 PlantScope Project • Educational System</span>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Architecture</h4>
+                <ul class="footer-links">
+                    <li><span>Stage 1: Image-Type Router</span></li>
+                    <li><span>Stage 2A: Leaf Classifier (78 Classes)</span></li>
+                    <li><span>Stage 2B: Whole Plant Model (40 Classes)</span></li>
+                    <li><span>Corpus: 12,845 Verified Images</span></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Advisory</h4>
+                <p class="footer-disclaimer">
+                    Educational and informational use only. Plant identifications from neural models are probabilistic. Verified monographs reflect peer-reviewed literature and do not constitute clinical guidance.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

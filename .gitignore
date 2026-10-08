@@ -1,0 +1,49 @@
+# Python & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.env
+.venv/
+
+# Large Datasets (19GB - DO NOT COMMIT TO GIT)
+dataset/
+dataset/**
+real_world_test/
+real_world_test_images/
+
+# Training Checkpoints & Backups (Only release weights tracked)
+models/checkpoints/
+models/archive/
+models/checkpoints/*
+models/archive/*
+
+# Temporary Uploads & Scratch
+backend/static/uploads/*
+!backend/static/uploads/.gitkeep
+scratch/
+.system_generated/
+
+# Database & Logs
+*.log
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Jupyter Checkpoints
+.ipynb_checkpoints/

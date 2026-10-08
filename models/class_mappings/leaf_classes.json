@@ -1,0 +1,812 @@
+{
+  "generated_at": "2026-10-07T22:00:51.178020",
+  "num_classes": 80,
+  "class_names": [
+    "Aloevera",
+    "Amla",
+    "Amruthaballi",
+    "Arali",
+    "Ashoka",
+    "Astma_weed",
+    "Badipala",
+    "Balloon_Vine",
+    "Bamboo",
+    "Beans",
+    "Betel",
+    "Bhrami",
+    "Bringaraja",
+    "Caricature",
+    "Castor",
+    "Catharanthus",
+    "Chakte",
+    "Chilly",
+    "Citron_Lime",
+    "Coffee",
+    "Common_Rue",
+    "Coriender",
+    "Curry",
+    "Doddpathre",
+    "Drumstick",
+    "Ekka",
+    "Eucalyptus",
+    "Ganigale",
+    "Ganike",
+    "Gasagase",
+    "Ginger",
+    "Globe Amarnath",
+    "Guava",
+    "Henna",
+    "Hibiscus",
+    "Honge",
+    "Insulin",
+    "Jackfruit",
+    "Jasmine",
+    "Kambajala",
+    "Kasambruga",
+    "Kohlrabi",
+    "Lantana",
+    "Lemon",
+    "Lemongrass",
+    "Malabar_Nut",
+    "Malabar_Spinach",
+    "Mango",
+    "Marigold",
+    "Mint",
+    "Neem",
+    "Nelavembu",
+    "Nerale",
+    "Nooni",
+    "Onion",
+    "Padri",
+    "Palak_Spinach",
+    "Papaya",
+    "Parijatha",
+    "Pea",
+    "Pepper",
+    "Pomoegranate",
+    "Pumpkin",
+    "Raddish",
+    "Rose",
+    "Sampige",
+    "Sapota",
+    "Seethaashoka",
+    "Seethapala",
+    "Spinach1",
+    "Tamarind",
+    "Taro",
+    "Tecoma",
+    "Thumbe",
+    "Tomato",
+    "Tulsi",
+    "Turmeric",
+    "camphor",
+    "kamakasturi",
+    "kepala"
+  ],
+  "class_details": [
+    {
+      "raw_folder_name": "Aloevera",
+      "normalized_name": "Aloevera",
+      "scientific_name": "Aloe barbadensis miller",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Amla",
+      "normalized_name": "Amla",
+      "scientific_name": "Phyllanthus emblica",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Amruthaballi",
+      "normalized_name": "Amruthaballi",
+      "scientific_name": "Tinospora cordifolia",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Arali",
+      "normalized_name": "Arali",
+      "scientific_name": "Nerium oleander",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "ashoka",
+      "normalized_name": "Ashoka",
+      "scientific_name": "Saraca asoca",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Astma_weed",
+      "normalized_name": "Astma_weed",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Badipala",
+      "normalized_name": "Badipala",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Balloon_Vine",
+      "normalized_name": "Balloon_Vine",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Bamboo",
+      "normalized_name": "Bamboo",
+      "scientific_name": "Bambusoideae",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Beans",
+      "normalized_name": "Beans",
+      "scientific_name": "Phaseolus vulgaris",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Betel",
+      "normalized_name": "Betel",
+      "scientific_name": "Piper betle",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Bhrami",
+      "normalized_name": "Bhrami",
+      "scientific_name": "Bacopa monnieri",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Bringaraja",
+      "normalized_name": "Bringaraja",
+      "scientific_name": "Eclipta prostrata",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "camphor",
+      "normalized_name": "camphor",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Caricature",
+      "normalized_name": "Caricature",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Castor",
+      "normalized_name": "Castor",
+      "scientific_name": "Ricinus communis",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Catharanthus",
+      "normalized_name": "Catharanthus",
+      "scientific_name": "Catharanthus roseus",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Chakte",
+      "normalized_name": "Chakte",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Chilly",
+      "normalized_name": "Chilly",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Citron lime (herelikai)",
+      "normalized_name": "Citron_Lime",
+      "scientific_name": "Citrus medica",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Coffee",
+      "normalized_name": "Coffee",
+      "scientific_name": "Coffea arabica",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Common rue(naagdalli)",
+      "normalized_name": "Common_Rue",
+      "scientific_name": "Ruta graveolens",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Coriender",
+      "normalized_name": "Coriender",
+      "scientific_name": "Coriandrum sativum",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Curry",
+      "normalized_name": "Curry",
+      "scientific_name": "Murraya koenigii",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Doddpathre",
+      "normalized_name": "Doddpathre",
+      "scientific_name": "Coleus amboinicus",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Drumstick",
+      "normalized_name": "Drumstick",
+      "scientific_name": "Moringa oleifera",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Ekka",
+      "normalized_name": "Ekka",
+      "scientific_name": "Calotropis gigantea",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Eucalyptus",
+      "normalized_name": "Eucalyptus",
+      "scientific_name": "Eucalyptus globulus",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Ganigale",
+      "normalized_name": "Ganigale",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Ganike",
+      "normalized_name": "Ganike",
+      "scientific_name": "Solanum nigrum",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Gasagase",
+      "normalized_name": "Gasagase",
+      "scientific_name": "Papaver somniferum",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Ginger",
+      "normalized_name": "Ginger",
+      "scientific_name": "Zingiber officinale",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Globe Amarnath",
+      "normalized_name": "Globe Amarnath",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Guava",
+      "normalized_name": "Guava",
+      "scientific_name": "Psidium guajava",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Henna",
+      "normalized_name": "Henna",
+      "scientific_name": "Lawsonia inermis",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Hibiscus",
+      "normalized_name": "Hibiscus",
+      "scientific_name": "Hibiscus rosa-sinensis",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Honge",
+      "normalized_name": "Honge",
+      "scientific_name": "Pongamia pinnata",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Insulin",
+      "normalized_name": "Insulin",
+      "scientific_name": "Costus igneus",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Jackfruit",
+      "normalized_name": "Jackfruit",
+      "scientific_name": "Artocarpus heterophyllus",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Jasmine",
+      "normalized_name": "Jasmine",
+      "scientific_name": "Jasminum sambac",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "kamakasturi",
+      "normalized_name": "kamakasturi",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Kambajala",
+      "normalized_name": "Kambajala",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Kasambruga",
+      "normalized_name": "Kasambruga",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "kepala",
+      "normalized_name": "kepala",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Kohlrabi",
+      "normalized_name": "Kohlrabi",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Lantana",
+      "normalized_name": "Lantana",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Lemon",
+      "normalized_name": "Lemon",
+      "scientific_name": "Citrus limon",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Lemongrass",
+      "normalized_name": "Lemongrass",
+      "scientific_name": "Cymbopogon citratus",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Malabar_Nut",
+      "normalized_name": "Malabar_Nut",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Malabar_Spinach",
+      "normalized_name": "Malabar_Spinach",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Mango",
+      "normalized_name": "Mango",
+      "scientific_name": "Mangifera indica",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Marigold",
+      "normalized_name": "Marigold",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Mint",
+      "normalized_name": "Mint",
+      "scientific_name": "Mentha arvensis",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Neem",
+      "normalized_name": "Neem",
+      "scientific_name": "Azadirachta indica",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Nelavembu",
+      "normalized_name": "Nelavembu",
+      "scientific_name": "",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Nerale",
+      "normalized_name": "Nerale",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Nooni",
+      "normalized_name": "Nooni",
+      "scientific_name": "Morinda citrifolia",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Onion",
+      "normalized_name": "Onion",
+      "scientific_name": "Allium cepa",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Padri",
+      "normalized_name": "Padri",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Palak(Spinach)",
+      "normalized_name": "Palak_Spinach",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Papaya",
+      "normalized_name": "Papaya",
+      "scientific_name": "Carica papaya",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Parijatha",
+      "normalized_name": "Parijatha",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Pea",
+      "normalized_name": "Pea",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Pepper",
+      "normalized_name": "Pepper",
+      "scientific_name": "Piper nigrum",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Pomoegranate",
+      "normalized_name": "Pomoegranate",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Pumpkin",
+      "normalized_name": "Pumpkin",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Raddish",
+      "normalized_name": "Raddish",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Rose",
+      "normalized_name": "Rose",
+      "scientific_name": "Rosa",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Sampige",
+      "normalized_name": "Sampige",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Sapota",
+      "normalized_name": "Sapota",
+      "scientific_name": "Manilkara zapota",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Seethaashoka",
+      "normalized_name": "Seethaashoka",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Seethapala",
+      "normalized_name": "Seethapala",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Spinach1",
+      "normalized_name": "Spinach1",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Tamarind",
+      "normalized_name": "Tamarind",
+      "scientific_name": "Tamarindus indica",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Taro",
+      "normalized_name": "Taro",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Tecoma",
+      "normalized_name": "Tecoma",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Thumbe",
+      "normalized_name": "Thumbe",
+      "scientific_name": "",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Tomato",
+      "normalized_name": "Tomato",
+      "scientific_name": "Solanum lycopersicum",
+      "is_medicinal": false,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Tulsi",
+      "normalized_name": "Tulsi",
+      "scientific_name": "Ocimum tenuiflorum",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    },
+    {
+      "raw_folder_name": "Turmeric",
+      "normalized_name": "Turmeric",
+      "scientific_name": "Curcuma longa",
+      "is_medicinal": true,
+      "source_dataset": "leaf"
+    }
+  ],
+  "index_to_class": {
+    "0": "Aloevera",
+    "1": "Amla",
+    "2": "Amruthaballi",
+    "3": "Arali",
+    "4": "Ashoka",
+    "5": "Astma_weed",
+    "6": "Badipala",
+    "7": "Balloon_Vine",
+    "8": "Bamboo",
+    "9": "Beans",
+    "10": "Betel",
+    "11": "Bhrami",
+    "12": "Bringaraja",
+    "13": "Caricature",
+    "14": "Castor",
+    "15": "Catharanthus",
+    "16": "Chakte",
+    "17": "Chilly",
+    "18": "Citron_Lime",
+    "19": "Coffee",
+    "20": "Common_Rue",
+    "21": "Coriender",
+    "22": "Curry",
+    "23": "Doddpathre",
+    "24": "Drumstick",
+    "25": "Ekka",
+    "26": "Eucalyptus",
+    "27": "Ganigale",
+    "28": "Ganike",
+    "29": "Gasagase",
+    "30": "Ginger",
+    "31": "Globe Amarnath",
+    "32": "Guava",
+    "33": "Henna",
+    "34": "Hibiscus",
+    "35": "Honge",
+    "36": "Insulin",
+    "37": "Jackfruit",
+    "38": "Jasmine",
+    "39": "Kambajala",
+    "40": "Kasambruga",
+    "41": "Kohlrabi",
+    "42": "Lantana",
+    "43": "Lemon",
+    "44": "Lemongrass",
+    "45": "Malabar_Nut",
+    "46": "Malabar_Spinach",
+    "47": "Mango",
+    "48": "Marigold",
+    "49": "Mint",
+    "50": "Neem",
+    "51": "Nelavembu",
+    "52": "Nerale",
+    "53": "Nooni",
+    "54": "Onion",
+    "55": "Padri",
+    "56": "Palak_Spinach",
+    "57": "Papaya",
+    "58": "Parijatha",
+    "59": "Pea",
+    "60": "Pepper",
+    "61": "Pomoegranate",
+    "62": "Pumpkin",
+    "63": "Raddish",
+    "64": "Rose",
+    "65": "Sampige",
+    "66": "Sapota",
+    "67": "Seethaashoka",
+    "68": "Seethapala",
+    "69": "Spinach1",
+    "70": "Tamarind",
+    "71": "Taro",
+    "72": "Tecoma",
+    "73": "Thumbe",
+    "74": "Tomato",
+    "75": "Tulsi",
+    "76": "Turmeric",
+    "77": "camphor",
+    "78": "kamakasturi",
+    "79": "kepala"
+  },
+  "class_to_index": {
+    "Aloevera": 0,
+    "Amla": 1,
+    "Amruthaballi": 2,
+    "Arali": 3,
+    "Ashoka": 4,
+    "Astma_weed": 5,
+    "Badipala": 6,
+    "Balloon_Vine": 7,
+    "Bamboo": 8,
+    "Beans": 9,
+    "Betel": 10,
+    "Bhrami": 11,
+    "Bringaraja": 12,
+    "Caricature": 13,
+    "Castor": 14,
+    "Catharanthus": 15,
+    "Chakte": 16,
+    "Chilly": 17,
+    "Citron_Lime": 18,
+    "Coffee": 19,
+    "Common_Rue": 20,
+    "Coriender": 21,
+    "Curry": 22,
+    "Doddpathre": 23,
+    "Drumstick": 24,
+    "Ekka": 25,
+    "Eucalyptus": 26,
+    "Ganigale": 27,
+    "Ganike": 28,
+    "Gasagase": 29,
+    "Ginger": 30,
+    "Globe Amarnath": 31,
+    "Guava": 32,
+    "Henna": 33,
+    "Hibiscus": 34,
+    "Honge": 35,
+    "Insulin": 36,
+    "Jackfruit": 37,
+    "Jasmine": 38,
+    "Kambajala": 39,
+    "Kasambruga": 40,
+    "Kohlrabi": 41,
+    "Lantana": 42,
+    "Lemon": 43,
+    "Lemongrass": 44,
+    "Malabar_Nut": 45,
+    "Malabar_Spinach": 46,
+    "Mango": 47,
+    "Marigold": 48,
+    "Mint": 49,
+    "Neem": 50,
+    "Nelavembu": 51,
+    "Nerale": 52,
+    "Nooni": 53,
+    "Onion": 54,
+    "Padri": 55,
+    "Palak_Spinach": 56,
+    "Papaya": 57,
+    "Parijatha": 58,
+    "Pea": 59,
+    "Pepper": 60,
+    "Pomoegranate": 61,
+    "Pumpkin": 62,
+    "Raddish": 63,
+    "Rose": 64,
+    "Sampige": 65,
+    "Sapota": 66,
+    "Seethaashoka": 67,
+    "Seethapala": 68,
+    "Spinach1": 69,
+    "Tamarind": 70,
+    "Taro": 71,
+    "Tecoma": 72,
+    "Thumbe": 73,
+    "Tomato": 74,
+    "Tulsi": 75,
+    "Turmeric": 76,
+    "camphor": 77,
+    "kamakasturi": 78,
+    "kepala": 79
+  }
+}

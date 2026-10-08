@@ -1,0 +1,51 @@
+{
+  "model_version": "plant_classifier_v2",
+  "class_names": [
+    "Aloevera",
+    "Amla",
+    "Bamboo",
+    "Bhrami",
+    "Curry",
+    "Guava",
+    "Hibiscus",
+    "Jasmine",
+    "Lemongrass",
+    "Mango",
+    "Mint",
+    "Neem",
+    "Tulsi",
+    "Turmeric"
+  ],
+  "index_to_class": {
+    "0": "Aloevera",
+    "1": "Amla",
+    "2": "Bamboo",
+    "3": "Bhrami",
+    "4": "Curry",
+    "5": "Guava",
+    "6": "Hibiscus",
+    "7": "Jasmine",
+    "8": "Lemongrass",
+    "9": "Mango",
+    "10": "Mint",
+    "11": "Neem",
+    "12": "Tulsi",
+    "13": "Turmeric"
+  },
+  "class_to_index": {
+    "Aloevera": 0,
+    "Amla": 1,
+    "Bamboo": 2,
+    "Bhrami": 3,
+    "Curry": 4,
+    "Guava": 5,
+    "Hibiscus": 6,
+    "Jasmine": 7,
+    "Lemongrass": 8,
+    "Mango": 9,
+    "Mint": 10,
+    "Neem": 11,
+    "Tulsi": 12,
+    "Turmeric": 13
+  }
+}

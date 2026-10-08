@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-10-08T18:46:43Z",
+  "samples_evaluated": 30,
+  "tta_mode": "fast",
+  "baseline_method_a": {
+    "top1_accuracy": 70.0,
+    "top3_accuracy": 100.0,
+    "avg_confidence": 55.07,
+    "ood_rejection_rate": 0.0,
+    "avg_latency_ms": 128.7
+  },
+  "upgraded_method_b": {
+    "top1_accuracy": 80.0,
+    "top3_accuracy": 100.0,
+    "avg_confidence": 41.41,
+    "prediction_stability": 92.22,
+    "ood_rejection_rate": 100.0,
+    "avg_latency_ms": 495.4
+  }
+}

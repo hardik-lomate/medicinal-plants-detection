@@ -1,0 +1,253 @@
+{
+  "title": "Whole-Plant Classifier (40 Classes)",
+  "model_path": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\models\\whole_plant_model.pth",
+  "manifest_path": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\models\\dataset_analysis\\whole_plant_manifest.csv",
+  "evaluated_at": "2026-10-08T10:21:33.480701",
+  "num_samples": 923,
+  "top1_accuracy": 0.9426,
+  "top3_accuracy": 0.9859,
+  "macro_f1": 0.9405,
+  "weighted_f1": 0.9414,
+  "per_class": {
+    "Aloevera": {
+      "samples": 26,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Amla": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Amruthaballi": {
+      "samples": 22,
+      "precision": 0.85,
+      "recall": 0.7727,
+      "f1": 0.8095
+    },
+    "Arali": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Ashoka": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Ashwagandha": {
+      "samples": 21,
+      "precision": 0.9545,
+      "recall": 1.0,
+      "f1": 0.9767
+    },
+    "Avacado": {
+      "samples": 23,
+      "precision": 0.9583,
+      "recall": 1.0,
+      "f1": 0.9787
+    },
+    "Bamboo": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Basale": {
+      "samples": 23,
+      "precision": 0.85,
+      "recall": 0.7391,
+      "f1": 0.7907
+    },
+    "Betel": {
+      "samples": 24,
+      "precision": 0.9231,
+      "recall": 1.0,
+      "f1": 0.96
+    },
+    "Betel_Nut": {
+      "samples": 23,
+      "precision": 0.92,
+      "recall": 1.0,
+      "f1": 0.9583
+    },
+    "Bhrami": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Castor": {
+      "samples": 24,
+      "precision": 0.9231,
+      "recall": 1.0,
+      "f1": 0.96
+    },
+    "Common_Rue": {
+      "samples": 23,
+      "precision": 0.875,
+      "recall": 0.6087,
+      "f1": 0.7179
+    },
+    "Curry": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Doddapatre": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Ekka": {
+      "samples": 23,
+      "precision": 0.88,
+      "recall": 0.9565,
+      "f1": 0.9167
+    },
+    "Ganike": {
+      "samples": 18,
+      "precision": 0.6,
+      "recall": 1.0,
+      "f1": 0.75
+    },
+    "Geranium": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 0.9565,
+      "f1": 0.9778
+    },
+    "Guava": {
+      "samples": 23,
+      "precision": 0.8519,
+      "recall": 1.0,
+      "f1": 0.92
+    },
+    "Henna": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 0.7826,
+      "f1": 0.878
+    },
+    "Hibiscus": {
+      "samples": 26,
+      "precision": 0.9286,
+      "recall": 1.0,
+      "f1": 0.963
+    },
+    "Honge": {
+      "samples": 23,
+      "precision": 0.9565,
+      "recall": 0.9565,
+      "f1": 0.9565
+    },
+    "Insulin": {
+      "samples": 21,
+      "precision": 0.9545,
+      "recall": 1.0,
+      "f1": 0.9767
+    },
+    "Jasmine": {
+      "samples": 29,
+      "precision": 0.9615,
+      "recall": 0.8621,
+      "f1": 0.9091
+    },
+    "Lemon": {
+      "samples": 23,
+      "precision": 0.9583,
+      "recall": 1.0,
+      "f1": 0.9787
+    },
+    "Lemongrass": {
+      "samples": 22,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Mango": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 0.6087,
+      "f1": 0.7568
+    },
+    "Mint": {
+      "samples": 24,
+      "precision": 1.0,
+      "recall": 0.9583,
+      "f1": 0.9787
+    },
+    "Neem": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Nithyapushpa": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 0.9565,
+      "f1": 0.9778
+    },
+    "Nooni": {
+      "samples": 21,
+      "precision": 0.8696,
+      "recall": 0.9524,
+      "f1": 0.9091
+    },
+    "Papaya": {
+      "samples": 23,
+      "precision": 1.0,
+      "recall": 0.9565,
+      "f1": 0.9778
+    },
+    "Pepper": {
+      "samples": 22,
+      "precision": 0.9565,
+      "recall": 1.0,
+      "f1": 0.9778
+    },
+    "Pomegranate": {
+      "samples": 22,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "Raktachandini": {
+      "samples": 23,
+      "precision": 0.9565,
+      "recall": 0.9565,
+      "f1": 0.9565
+    },
+    "Rose": {
+      "samples": 26,
+      "precision": 1.0,
+      "recall": 0.8462,
+      "f1": 0.9167
+    },
+    "Sapota": {
+      "samples": 23,
+      "precision": 0.9565,
+      "recall": 0.9565,
+      "f1": 0.9565
+    },
+    "Tulsi": {
+      "samples": 23,
+      "precision": 0.875,
+      "recall": 0.913,
+      "f1": 0.8936
+    },
+    "Wood_sorel": {
+      "samples": 23,
+      "precision": 0.8846,
+      "recall": 1.0,
+      "f1": 0.9388
+    }
+  }
+}

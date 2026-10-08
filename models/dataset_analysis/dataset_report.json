@@ -1,0 +1,2903 @@
+{
+  "generated_at": "2026-10-07T22:00:40.198028",
+  "dataset_root": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets",
+  "leaf_dataset": {
+    "group_name": "Datasets_Leaf",
+    "path": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf",
+    "num_classes": 80,
+    "total_valid_images": 6900,
+    "total_corrupted": 0,
+    "total_unsupported": 4,
+    "total_duplicates": 41,
+    "empty_classes": [],
+    "low_data_classes": [
+      "Lemongrass",
+      "Pepper"
+    ],
+    "duplicate_pairs": [
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Badipala\\1180.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Badipala\\1182.jpg",
+        "class": "Badipala",
+        "hash": "2e1cca18166541352c5173dd4df4c8a8"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Badipala\\1184.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Badipala\\1186.jpg",
+        "class": "Badipala",
+        "hash": "169f01b56e4a14f322a146b52be4e7b8"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Balloon_Vine\\1324.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Balloon_Vine\\1330.jpg",
+        "class": "Balloon_Vine",
+        "hash": "9201079d164b9d21f3e334fa29a323a3"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Bhrami\\2212.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Bhrami\\2214.jpg",
+        "class": "Bhrami",
+        "hash": "e35ced0e5c96e23fdc21fe0df6e08c8d"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Bhrami\\2220.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Bhrami\\2222.jpg",
+        "class": "Bhrami",
+        "hash": "4106d53db846ff91641fa8a540cf2372"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Doddpathre\\178.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Doddpathre\\180.jpg",
+        "class": "Doddpathre",
+        "hash": "bf39802cebaeabda0474d4a6a94b56e4"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Doddpathre\\248.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Doddpathre\\250.jpg",
+        "class": "Doddpathre",
+        "hash": "485b5de2c11f5a997aa3c778adbd4ffe"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\192.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\194.jpg",
+        "class": "Globe Amarnath",
+        "hash": "72749751f24f4d05959c6baad64bfd9b"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\200.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\202.jpg",
+        "class": "Globe Amarnath",
+        "hash": "abaac152020341fcb0f773cc8f2429ce"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\206.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\208.jpg",
+        "class": "Globe Amarnath",
+        "hash": "03e3bbcabef6e5c41b9034b814a54de2"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\212.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\214.jpg",
+        "class": "Globe Amarnath",
+        "hash": "ffe2156fc057ab55576a0dd1d9a26b1a"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\220.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\222.jpg",
+        "class": "Globe Amarnath",
+        "hash": "7e879f709b4aff0e898f527cbea6bb0f"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\248.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\250.jpg",
+        "class": "Globe Amarnath",
+        "hash": "7cd60795a5f5d3d8991ec4c96979d6bc"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\270.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\272.jpg",
+        "class": "Globe Amarnath",
+        "hash": "512629935311fa6447e2180fcfae109d"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\274.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\276.jpg",
+        "class": "Globe Amarnath",
+        "hash": "f0dccaf09584d17e9fd139693c9073b0"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\284.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\286.jpg",
+        "class": "Globe Amarnath",
+        "hash": "937d155102eb7bf2f8f260411c074308"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\304.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\306.jpg",
+        "class": "Globe Amarnath",
+        "hash": "3ace122ee957069ce989b6fa72ab4658"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\310.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\312.jpg",
+        "class": "Globe Amarnath",
+        "hash": "c28f82fabc637fe9cf4d5b18d863cc69"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\322.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath\\324.jpg",
+        "class": "Globe Amarnath",
+        "hash": "bbe0752fd0ff436feff129fc2e2b4c98"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Henna\\472.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Henna\\474.jpg",
+        "class": "Henna",
+        "hash": "fa473699ca579b3b6297c3b01fcfc669"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Henna\\478.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Henna\\480.jpg",
+        "class": "Henna",
+        "hash": "0dfd2510fe5d23a506e42b9f5ec2566b"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\732.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\734.jpg",
+        "class": "Honge",
+        "hash": "dc9819438fbb6700cce8c250b45db02d"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\736.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\738.jpg",
+        "class": "Honge",
+        "hash": "61deba8e4164f206273fd22c4941fc9e"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\740.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\742.jpg",
+        "class": "Honge",
+        "hash": "751a488f403f4e527e380920e4cb038b"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\750.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\752.jpg",
+        "class": "Honge",
+        "hash": "9e28d50ff63b7559c414487d416daab8"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\754.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\756.jpg",
+        "class": "Honge",
+        "hash": "c300d062d4e198d6488f4476d44d1d43"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\760.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\762.jpg",
+        "class": "Honge",
+        "hash": "14d4af5b52fffe771296536e5c5fbecb"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\772.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\774.jpg",
+        "class": "Honge",
+        "hash": "a6c0b5fcf43ad9a57051dbb55e6f9991"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\776.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\778.jpg",
+        "class": "Honge",
+        "hash": "3b12824a2bc8f690d1f5510de6bedc4b"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\782.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\784.jpg",
+        "class": "Honge",
+        "hash": "f7fbf6c80fd699d5deb7193b628b95c2"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\792.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\794.jpg",
+        "class": "Honge",
+        "hash": "f9a0da32e1c71afc9a29afcce1e5a9a7"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\798.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\800.jpg",
+        "class": "Honge",
+        "hash": "cacae09cdc4f74ed58d3a0f81e77adef"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\808.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\810.jpg",
+        "class": "Honge",
+        "hash": "d90bb57d04b6baed83405520fb1497ab"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\842.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\844.jpg",
+        "class": "Honge",
+        "hash": "8f8c80d1854f5632978341067c682753"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\854.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\856.jpg",
+        "class": "Honge",
+        "hash": "705040a32b9e871c50cf3d703ec7eff6"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\868.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\870.jpg",
+        "class": "Honge",
+        "hash": "c714096af83792b859c14d8d0013686c"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\880.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\882.jpg",
+        "class": "Honge",
+        "hash": "55d4d72d6267899f22397f3a62ebe72d"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\896.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge\\898.jpg",
+        "class": "Honge",
+        "hash": "7a3a7189da054bb51c4b432f602ef8e3"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tecoma\\20190920_143739 (1).jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tecoma\\20190920_143739.jpg",
+        "class": "Tecoma",
+        "hash": "1cadc755c9bca6728a14420db93433d0"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tecoma\\20190920_143827 (1).jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tecoma\\20190920_143827.jpg",
+        "class": "Tecoma",
+        "hash": "bbdeb8f541d0d645d8a0cc9abe17f416"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tecoma\\20190920_143911 (1).jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tecoma\\20190920_143911.jpg",
+        "class": "Tecoma",
+        "hash": "2f6b9f2c0a77d382d575e26aa917337d"
+      }
+    ],
+    "color_modes": {
+      "RGB": 6900
+    },
+    "dimensions": {
+      "min_width": 450,
+      "max_width": 4656,
+      "avg_width": 1723.1,
+      "min_height": 600,
+      "max_height": 4656,
+      "avg_height": 1423.5
+    },
+    "classes": {
+      "Aloevera": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Aloevera",
+        "total_files": 118,
+        "valid_images": 118,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 118
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Amla": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Amla",
+        "total_files": 67,
+        "valid_images": 67,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 67
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Amruthaballi": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Amruthaballi",
+        "total_files": 91,
+        "valid_images": 91,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 91
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Arali": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Arali",
+        "total_files": 89,
+        "valid_images": 89,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 89
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "ashoka": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\ashoka",
+        "total_files": 81,
+        "valid_images": 81,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 81
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Astma_weed": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Astma_weed",
+        "total_files": 82,
+        "valid_images": 82,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 82
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Badipala": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Badipala",
+        "total_files": 76,
+        "valid_images": 76,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 76
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Balloon_Vine": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Balloon_Vine",
+        "total_files": 61,
+        "valid_images": 61,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 61
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Bamboo": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Bamboo",
+        "total_files": 118,
+        "valid_images": 118,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 118
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Beans": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Beans",
+        "total_files": 97,
+        "valid_images": 97,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 97
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Betel": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Betel",
+        "total_files": 114,
+        "valid_images": 114,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 114
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Bhrami": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Bhrami",
+        "total_files": 104,
+        "valid_images": 104,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 104
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Bringaraja": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Bringaraja",
+        "total_files": 73,
+        "valid_images": 73,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 73
+        },
+        "min_width": 1836,
+        "max_width": 4000,
+        "avg_width": 3134.3,
+        "min_height": 1836,
+        "max_height": 3264,
+        "avg_height": 2261.6
+      },
+      "camphor": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\camphor",
+        "total_files": 66,
+        "valid_images": 66,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 66
+        },
+        "min_width": 1836,
+        "max_width": 3264,
+        "avg_width": 2723.1,
+        "min_height": 1836,
+        "max_height": 3264,
+        "avg_height": 2376.9
+      },
+      "Caricature": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Caricature",
+        "total_files": 76,
+        "valid_images": 76,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 76
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Castor": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Castor",
+        "total_files": 129,
+        "valid_images": 129,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 129
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Catharanthus": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Catharanthus",
+        "total_files": 134,
+        "valid_images": 134,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 134
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Chakte": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Chakte",
+        "total_files": 68,
+        "valid_images": 68,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 68
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Chilly": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Chilly",
+        "total_files": 69,
+        "valid_images": 69,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 69
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Citron lime (herelikai)": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Citron lime (herelikai)",
+        "total_files": 99,
+        "valid_images": 99,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 99
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Coffee": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Coffee",
+        "total_files": 83,
+        "valid_images": 83,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 83
+        },
+        "min_width": 1836,
+        "max_width": 4160,
+        "avg_width": 2980.1,
+        "min_height": 1836,
+        "max_height": 4160,
+        "avg_height": 2776.5
+      },
+      "Common rue(naagdalli)": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Common rue(naagdalli)",
+        "total_files": 67,
+        "valid_images": 67,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 67
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Coriender": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Coriender",
+        "total_files": 115,
+        "valid_images": 115,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 115
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Curry": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Curry",
+        "total_files": 168,
+        "valid_images": 168,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 168
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Doddpathre": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Doddpathre",
+        "total_files": 142,
+        "valid_images": 142,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 142
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Drumstick": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Drumstick",
+        "total_files": 56,
+        "valid_images": 56,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 56
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Ekka": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Ekka",
+        "total_files": 81,
+        "valid_images": 81,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 81
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Eucalyptus": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Eucalyptus",
+        "total_files": 80,
+        "valid_images": 80,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 80
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Ganigale": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Ganigale",
+        "total_files": 75,
+        "valid_images": 75,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 75
+        },
+        "min_width": 2340,
+        "max_width": 4160,
+        "avg_width": 3916.3,
+        "min_height": 2250,
+        "max_height": 4160,
+        "avg_height": 2430.4
+      },
+      "Ganike": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Ganike",
+        "total_files": 63,
+        "valid_images": 63,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 63
+        },
+        "min_width": 3120,
+        "max_width": 4160,
+        "avg_width": 3899.7,
+        "min_height": 2250,
+        "max_height": 4160,
+        "avg_height": 2661.0
+      },
+      "Gasagase": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Gasagase",
+        "total_files": 79,
+        "valid_images": 79,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 79
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Ginger": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Ginger",
+        "total_files": 82,
+        "valid_images": 82,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 82
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Globe Amarnath": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Globe Amarnath",
+        "total_files": 81,
+        "valid_images": 81,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 81
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Guava": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Guava",
+        "total_files": 128,
+        "valid_images": 128,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 128
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Henna": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Henna",
+        "total_files": 80,
+        "valid_images": 80,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 80
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Hibiscus": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Hibiscus",
+        "total_files": 118,
+        "valid_images": 118,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 118
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Honge": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Honge",
+        "total_files": 113,
+        "valid_images": 113,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 113
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Insulin": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Insulin",
+        "total_files": 89,
+        "valid_images": 89,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 89
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Jackfruit": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Jackfruit",
+        "total_files": 110,
+        "valid_images": 110,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 110
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Jasmine": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Jasmine",
+        "total_files": 49,
+        "valid_images": 49,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 49
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "kamakasturi": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\kamakasturi",
+        "total_files": 67,
+        "valid_images": 67,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 67
+        },
+        "min_width": 2352,
+        "max_width": 4160,
+        "avg_width": 2972.7,
+        "min_height": 2352,
+        "max_height": 4160,
+        "avg_height": 3539.3
+      },
+      "Kambajala": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Kambajala",
+        "total_files": 59,
+        "valid_images": 59,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 59
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Kasambruga": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Kasambruga",
+        "total_files": 48,
+        "valid_images": 48,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 48
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "kepala": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\kepala",
+        "total_files": 76,
+        "valid_images": 76,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 76
+        },
+        "min_width": 4000,
+        "max_width": 4000,
+        "avg_width": 4000.0,
+        "min_height": 2250,
+        "max_height": 2250,
+        "avg_height": 2250.0
+      },
+      "Kohlrabi": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Kohlrabi",
+        "total_files": 73,
+        "valid_images": 73,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 73
+        },
+        "min_width": 4032,
+        "max_width": 4032,
+        "avg_width": 4032.0,
+        "min_height": 2268,
+        "max_height": 2268,
+        "avg_height": 2268.0
+      },
+      "Lantana": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Lantana",
+        "total_files": 76,
+        "valid_images": 76,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 76
+        },
+        "min_width": 1836,
+        "max_width": 4160,
+        "avg_width": 3157.5,
+        "min_height": 1836,
+        "max_height": 4160,
+        "avg_height": 2630.9
+      },
+      "Lemon": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Lemon",
+        "total_files": 123,
+        "valid_images": 123,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 123
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Lemongrass": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Lemongrass",
+        "total_files": 8,
+        "valid_images": 8,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 8
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Malabar_Nut": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Malabar_Nut",
+        "total_files": 51,
+        "valid_images": 51,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 51
+        },
+        "min_width": 1836,
+        "max_width": 4000,
+        "avg_width": 2990.9,
+        "min_height": 1836,
+        "max_height": 3264,
+        "avg_height": 2391.5
+      },
+      "Malabar_Spinach": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Malabar_Spinach",
+        "total_files": 79,
+        "valid_images": 79,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 79
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Mango": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Mango",
+        "total_files": 103,
+        "valid_images": 103,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 103
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Marigold": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Marigold",
+        "total_files": 93,
+        "valid_images": 93,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 93
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Mint": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Mint",
+        "total_files": 135,
+        "valid_images": 135,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 135
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Neem": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Neem",
+        "total_files": 132,
+        "valid_images": 132,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 132
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Nelavembu": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Nelavembu",
+        "total_files": 90,
+        "valid_images": 90,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 90
+        },
+        "min_width": 450,
+        "max_width": 450,
+        "avg_width": 450.0,
+        "min_height": 600,
+        "max_height": 600,
+        "avg_height": 600.0
+      },
+      "Nerale": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Nerale",
+        "total_files": 62,
+        "valid_images": 62,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 62
+        },
+        "min_width": 2620,
+        "max_width": 4656,
+        "avg_width": 3893.8,
+        "min_height": 2250,
+        "max_height": 4656,
+        "avg_height": 2703.7
+      },
+      "Nooni": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Nooni",
+        "total_files": 72,
+        "valid_images": 72,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 72
+        },
+        "min_width": 2620,
+        "max_width": 4656,
+        "avg_width": 3797.3,
+        "min_height": 2250,
+        "max_height": 4656,
+        "avg_height": 2666.4
+      },
+      "Onion": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Onion",
+        "total_files": 92,
+        "valid_images": 92,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 92
+        },
+        "min_width": 4032,
+        "max_width": 4032,
+        "avg_width": 4032.0,
+        "min_height": 1860,
+        "max_height": 1860,
+        "avg_height": 1860.0
+      },
+      "Padri": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Padri",
+        "total_files": 73,
+        "valid_images": 73,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 73
+        },
+        "min_width": 1836,
+        "max_width": 3264,
+        "avg_width": 2696.7,
+        "min_height": 1836,
+        "max_height": 3264,
+        "avg_height": 2403.3
+      },
+      "Palak(Spinach)": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Palak(Spinach)",
+        "total_files": 149,
+        "valid_images": 149,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 149
+        },
+        "min_width": 1952,
+        "max_width": 4160,
+        "avg_width": 2673.2,
+        "min_height": 2352,
+        "max_height": 4640,
+        "avg_height": 4267.8
+      },
+      "Papaya": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Papaya",
+        "total_files": 135,
+        "valid_images": 135,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 135
+        },
+        "min_width": 2592,
+        "max_width": 4608,
+        "avg_width": 4026.3,
+        "min_height": 1860,
+        "max_height": 4608,
+        "avg_height": 2119.1
+      },
+      "Parijatha": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Parijatha",
+        "total_files": 66,
+        "valid_images": 66,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 66
+        },
+        "min_width": 2340,
+        "max_width": 4160,
+        "avg_width": 3718.8,
+        "min_height": 2340,
+        "max_height": 4160,
+        "avg_height": 2781.2
+      },
+      "Pea": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Pea",
+        "total_files": 47,
+        "valid_images": 47,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 47
+        },
+        "min_width": 3905,
+        "max_width": 4160,
+        "avg_width": 4154.6,
+        "min_height": 2194,
+        "max_height": 2340,
+        "avg_height": 2336.8
+      },
+      "Pepper": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Pepper",
+        "total_files": 8,
+        "valid_images": 8,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 8
+        },
+        "min_width": 4160,
+        "max_width": 4160,
+        "avg_width": 4160.0,
+        "min_height": 3120,
+        "max_height": 3120,
+        "avg_height": 3120.0
+      },
+      "Pomoegranate": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Pomoegranate",
+        "total_files": 75,
+        "valid_images": 75,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 75
+        },
+        "min_width": 4032,
+        "max_width": 4032,
+        "avg_width": 4032.0,
+        "min_height": 2268,
+        "max_height": 2268,
+        "avg_height": 2268.0
+      },
+      "Pumpkin": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Pumpkin",
+        "total_files": 92,
+        "valid_images": 92,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 92
+        },
+        "min_width": 4032,
+        "max_width": 4032,
+        "avg_width": 4032.0,
+        "min_height": 1860,
+        "max_height": 1860,
+        "avg_height": 1860.0
+      },
+      "Raddish": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Raddish",
+        "total_files": 40,
+        "valid_images": 40,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 40
+        },
+        "min_width": 4000,
+        "max_width": 4000,
+        "avg_width": 4000.0,
+        "min_height": 3000,
+        "max_height": 3000,
+        "avg_height": 3000.0
+      },
+      "Rose": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Rose",
+        "total_files": 106,
+        "valid_images": 106,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 106
+        },
+        "min_width": 3456,
+        "max_width": 4608,
+        "avg_width": 4032.0,
+        "min_height": 3456,
+        "max_height": 4608,
+        "avg_height": 4032.0
+      },
+      "Sampige": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Sampige",
+        "total_files": 61,
+        "valid_images": 61,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 61
+        },
+        "min_width": 2340,
+        "max_width": 4160,
+        "avg_width": 4100.3,
+        "min_height": 2340,
+        "max_height": 4160,
+        "avg_height": 2399.7
+      },
+      "Sapota": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Sapota",
+        "total_files": 44,
+        "valid_images": 44,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 1,
+        "modes": {
+          "RGB": 44
+        },
+        "min_width": 4000,
+        "max_width": 4000,
+        "avg_width": 4000.0,
+        "min_height": 2250,
+        "max_height": 2250,
+        "avg_height": 2250.0
+      },
+      "Seethaashoka": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Seethaashoka",
+        "total_files": 47,
+        "valid_images": 47,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 47
+        },
+        "min_width": 1836,
+        "max_width": 3264,
+        "avg_width": 2808.3,
+        "min_height": 1836,
+        "max_height": 3264,
+        "avg_height": 2291.7
+      },
+      "Seethapala": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Seethapala",
+        "total_files": 114,
+        "valid_images": 114,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 114
+        },
+        "min_width": 1860,
+        "max_width": 4032,
+        "avg_width": 3974.8,
+        "min_height": 1860,
+        "max_height": 4032,
+        "avg_height": 1917.2
+      },
+      "Spinach1": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Spinach1",
+        "total_files": 67,
+        "valid_images": 67,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 3,
+        "modes": {
+          "RGB": 67
+        },
+        "min_width": 4000,
+        "max_width": 4000,
+        "avg_width": 4000.0,
+        "min_height": 2000,
+        "max_height": 2250,
+        "avg_height": 2182.8
+      },
+      "Tamarind": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tamarind",
+        "total_files": 176,
+        "valid_images": 176,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 176
+        },
+        "min_width": 3456,
+        "max_width": 4608,
+        "avg_width": 3691.6,
+        "min_height": 3456,
+        "max_height": 4608,
+        "avg_height": 4372.4
+      },
+      "Taro": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Taro",
+        "total_files": 69,
+        "valid_images": 69,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 69
+        },
+        "min_width": 2448,
+        "max_width": 4000,
+        "avg_width": 3720.6,
+        "min_height": 2250,
+        "max_height": 3264,
+        "avg_height": 2420.3
+      },
+      "Tecoma": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tecoma",
+        "total_files": 69,
+        "valid_images": 69,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 69
+        },
+        "min_width": 4032,
+        "max_width": 4032,
+        "avg_width": 4032.0,
+        "min_height": 2268,
+        "max_height": 2268,
+        "avg_height": 2268.0
+      },
+      "Thumbe": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Thumbe",
+        "total_files": 74,
+        "valid_images": 74,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 74
+        },
+        "min_width": 2592,
+        "max_width": 4608,
+        "avg_width": 4022.1,
+        "min_height": 2250,
+        "max_height": 4608,
+        "avg_height": 2315.1
+      },
+      "Tomato": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tomato",
+        "total_files": 62,
+        "valid_images": 62,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 62
+        },
+        "min_width": 4032,
+        "max_width": 4032,
+        "avg_width": 4032.0,
+        "min_height": 2268,
+        "max_height": 2268,
+        "avg_height": 2268.0
+      },
+      "Tulsi": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Tulsi",
+        "total_files": 177,
+        "valid_images": 177,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 177
+        },
+        "min_width": 1024,
+        "max_width": 4608,
+        "avg_width": 3919.1,
+        "min_height": 1024,
+        "max_height": 4640,
+        "avg_height": 2582.1
+      },
+      "Turmeric": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Leaf\\Turmeric",
+        "total_files": 39,
+        "valid_images": 39,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 39
+        },
+        "min_width": 2592,
+        "max_width": 4608,
+        "avg_width": 4050.9,
+        "min_height": 2340,
+        "max_height": 4608,
+        "avg_height": 2580.9
+      }
+    }
+  },
+  "plant_dataset": {
+    "group_name": "Datasets_Plant",
+    "path": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant",
+    "num_classes": 40,
+    "total_valid_images": 5945,
+    "total_corrupted": 0,
+    "total_unsupported": 0,
+    "total_duplicates": 57,
+    "empty_classes": [],
+    "low_data_classes": [],
+    "duplicate_pairs": [
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2420.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2444.jpg",
+        "class": "Amruta_Balli",
+        "hash": "87b49f2f342193b59572a874cca7f4a3"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2440.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2461.jpg",
+        "class": "Amruta_Balli",
+        "hash": "69dd1dacfa3351a180202f6b02f86841"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2421.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2463.jpg",
+        "class": "Amruta_Balli",
+        "hash": "ea653b8a8cd1dae8a272cb45f29ee0d7"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2462.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2472.jpg",
+        "class": "Amruta_Balli",
+        "hash": "fea31428913247c501186c31def312f2"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2457.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2478.jpg",
+        "class": "Amruta_Balli",
+        "hash": "485bedfd90c337c83d37613212091c6b"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2469.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2488.jpg",
+        "class": "Amruta_Balli",
+        "hash": "82cf693302739df12ed5bb1735f94595"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2426.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2492.jpg",
+        "class": "Amruta_Balli",
+        "hash": "f1e03afe5541bcdceabb0945cca264f3"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2455.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2521.jpg",
+        "class": "Amruta_Balli",
+        "hash": "46a91cabce6fc06821a72d0b9b7ef1e0"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2497.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli\\2527.jpg",
+        "class": "Amruta_Balli",
+        "hash": "9a362579cd2e58b638347bce0a260d0c"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2204.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2236.jpg",
+        "class": "Ashwagandha",
+        "hash": "626cc65b50fec47c585c8b0390fdab5f"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2228.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2256.jpg",
+        "class": "Ashwagandha",
+        "hash": "d56b28f4612d1c47648301ecc7898034"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2193.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2261.jpg",
+        "class": "Ashwagandha",
+        "hash": "667e8d14a5216faed2a4bbd0f3d70713"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2210.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2263.jpg",
+        "class": "Ashwagandha",
+        "hash": "e771ffcc03a2216a62c82021032916a4"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2169.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2265.jpg",
+        "class": "Ashwagandha",
+        "hash": "6599afc1b78d81f78c92a62cf47848be"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2171.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha\\2270.jpg",
+        "class": "Ashwagandha",
+        "hash": "d7a6a26101d2bba4f39c7bb5305a6a45"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5744.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5755.jpg",
+        "class": "Insulin",
+        "hash": "d7a424c15a742aa1ef04abd52d75e91f"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5747.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5783.jpg",
+        "class": "Insulin",
+        "hash": "8e14c2464f6b334b5e01379d42dce6fe"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5720.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5802.jpg",
+        "class": "Insulin",
+        "hash": "1d2c422e544fe93409ba3a2781b085f7"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5723.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5813.jpg",
+        "class": "Insulin",
+        "hash": "ed319e1603542c165aac127e5c1c9f3a"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5797.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5819.jpg",
+        "class": "Insulin",
+        "hash": "c8fd3ad1c4235cb89b215490ef0ffc23"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5741.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin\\5820.jpg",
+        "class": "Insulin",
+        "hash": "f94d7e5800f535cb30c03e89d23a9bdb"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5481.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5495.jpg",
+        "class": "Lemon_grass",
+        "hash": "b7ffdfbefeb659d133f19a19907008f4"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5506.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5542.jpg",
+        "class": "Lemon_grass",
+        "hash": "aa3497d1dd2c8a0d11b43cb57f31d265"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5494.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5558.jpg",
+        "class": "Lemon_grass",
+        "hash": "72e3dc7d2ac8972f49fcf1da71c8a25a"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5500.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5561.jpg",
+        "class": "Lemon_grass",
+        "hash": "ac480e9041e212c65c3817ec02fd7ce3"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5535.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5563.jpg",
+        "class": "Lemon_grass",
+        "hash": "caafdb89659c3c6847fc20d39310acf8"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5486.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5574.jpg",
+        "class": "Lemon_grass",
+        "hash": "45ac39abc2348459243fca20f2859c45"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5532.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5577.jpg",
+        "class": "Lemon_grass",
+        "hash": "bcb492b53b7e9989861bfa4913f0dcfd"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5537.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass\\5584.jpg",
+        "class": "Lemon_grass",
+        "hash": "56e76965044d5e069dc53b68f7cd5ce9"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2292.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2346.jpg",
+        "class": "Nagadali",
+        "hash": "f53a9310a7c716eae8a022ed7367e96e"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2343.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2369.jpg",
+        "class": "Nagadali",
+        "hash": "66b0a197c29b0889e49372d59a855c94"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2289.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2375.jpg",
+        "class": "Nagadali",
+        "hash": "de27621058553743d2264238c6d71565"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2352.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2376.jpg",
+        "class": "Nagadali",
+        "hash": "0243ce9839f3172cd549fd0681060df4"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2310.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2381.jpg",
+        "class": "Nagadali",
+        "hash": "5ab2146aae7002edc21171d770d000bd"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2298.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2396.jpg",
+        "class": "Nagadali",
+        "hash": "d423a9a8abbd7f5f91dd7858614124e7"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2389.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2400.jpg",
+        "class": "Nagadali",
+        "hash": "15696973f89c20275e4382e824368afa"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2300.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali\\2404.jpg",
+        "class": "Nagadali",
+        "hash": "f33001cbd470afa89e019ed6151e4042"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2768.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2782.jpg",
+        "class": "Nooni",
+        "hash": "5c90792374d544c0add02b7368f11333"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2781.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2785.jpg",
+        "class": "Nooni",
+        "hash": "0b60a984a0d531d719dda8977b792464"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2774.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2796.jpg",
+        "class": "Nooni",
+        "hash": "77f535a3c826ebd6557a701632223bb1"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2817.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2818.jpg",
+        "class": "Nooni",
+        "hash": "d08a48437cf6f4cc438ab14df5929755"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2809.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2829.jpg",
+        "class": "Nooni",
+        "hash": "8398273637c28f837d92f1f6f37e9585"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2797.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2830.jpg",
+        "class": "Nooni",
+        "hash": "4248f77e93d2b320fde46ad95aadadd3"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2845.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2848.jpg",
+        "class": "Nooni",
+        "hash": "962dc60ac1648ba531f4e522cfe433ad"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2857.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2860.jpg",
+        "class": "Nooni",
+        "hash": "c7698bd41959d16c96759013fb7d1a11"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2821.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2865.jpg",
+        "class": "Nooni",
+        "hash": "034b48bfb107df9fcf450eedb8969c31"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2863.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2874.jpg",
+        "class": "Nooni",
+        "hash": "4aa9930908022737a21a2ed9eca6e485"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2775.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2875.jpg",
+        "class": "Nooni",
+        "hash": "f55e77bc6e86f743f335008e17d6eee6"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2869.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2876.jpg",
+        "class": "Nooni",
+        "hash": "2fd6abf5ff38b06063bfc11dac293148"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2855.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2878.jpg",
+        "class": "Nooni",
+        "hash": "e9d61f88ccfa988468c25ec2ead51c08"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2833.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni\\2883.jpg",
+        "class": "Nooni",
+        "hash": "a9ceb1df6224fca05477aedd2266170b"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pepper\\5265.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pepper\\5266.jpg",
+        "class": "Pepper",
+        "hash": "1f05cdd268fd21dc7d4fc2cfa224cd6a"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pepper\\5289.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pepper\\5327.jpg",
+        "class": "Pepper",
+        "hash": "93b3ac2df1c9eb180545c405c3104517"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pepper\\5243.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pepper\\5330.jpg",
+        "class": "Pepper",
+        "hash": "967ab6318a78710147355129c361307a"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pomegranate\\3089.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pomegranate\\3106.jpg",
+        "class": "Pomegranate",
+        "hash": "ad0cd3a7bbce468b6d1228addde0a123"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pomegranate\\3058.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pomegranate\\3114.jpg",
+        "class": "Pomegranate",
+        "hash": "c17a5e6835c2274b3c491423f5a9e245"
+      },
+      {
+        "file1": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pomegranate\\3025.jpg",
+        "file2": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pomegranate\\3122.jpg",
+        "class": "Pomegranate",
+        "hash": "9a9ab6cb51e38063d98ba46c985471c6"
+      }
+    ],
+    "color_modes": {
+      "RGB": 5945
+    },
+    "dimensions": {
+      "min_width": 277,
+      "max_width": 600,
+      "avg_width": 584.4,
+      "min_height": 270,
+      "max_height": 600,
+      "avg_height": 384.3
+    },
+    "classes": {
+      "Aloevera": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Aloevera",
+        "total_files": 164,
+        "valid_images": 164,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 164
+        },
+        "min_width": 285,
+        "max_width": 600,
+        "avg_width": 586.6,
+        "min_height": 283,
+        "max_height": 600,
+        "avg_height": 401.4
+      },
+      "Amla": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amla",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 277,
+        "max_height": 277,
+        "avg_height": 277.0
+      },
+      "Amruta_Balli": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Amruta_Balli",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 450,
+        "max_width": 600,
+        "avg_width": 572.3,
+        "min_height": 283,
+        "max_height": 600,
+        "avg_height": 388.5
+      },
+      "Arali": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Arali",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 270,
+        "max_height": 450,
+        "avg_height": 301.0
+      },
+      "Ashoka": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashoka",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 450,
+        "max_height": 450,
+        "avg_height": 450.0
+      },
+      "Ashwagandha": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ashwagandha",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 450,
+        "max_height": 450,
+        "avg_height": 450.0
+      },
+      "Avacado": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Avacado",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 283,
+        "avg_height": 283.0
+      },
+      "Bamboo": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Bamboo",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 283,
+        "avg_height": 283.0
+      },
+      "Basale": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Basale",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 285,
+        "max_width": 600,
+        "avg_width": 556.3,
+        "min_height": 283,
+        "max_height": 600,
+        "avg_height": 432.7
+      },
+      "Betel": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Betel",
+        "total_files": 151,
+        "valid_images": 151,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 151
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 339.4
+      },
+      "Betel_Nut": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Betel_Nut",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 283,
+        "avg_height": 283.0
+      },
+      "Brahmi": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Brahmi",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 377.9
+      },
+      "Castor": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Castor",
+        "total_files": 160,
+        "valid_images": 160,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 160
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 406.2
+      },
+      "Curry_Leaf": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Curry_Leaf",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 450,
+        "max_width": 600,
+        "avg_width": 579.5,
+        "min_height": 283,
+        "max_height": 600,
+        "avg_height": 400.8
+      },
+      "Doddapatre": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Doddapatre",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 450,
+        "max_height": 450,
+        "avg_height": 450.0
+      },
+      "Ekka": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ekka",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 309.3
+      },
+      "Ganike": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Ganike",
+        "total_files": 115,
+        "valid_images": 115,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 115
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 283,
+        "avg_height": 283.0
+      },
+      "Gauva": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Gauva",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 319.6
+      },
+      "Geranium": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Geranium",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 270,
+        "max_height": 283,
+        "avg_height": 281.8
+      },
+      "Henna": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Henna",
+        "total_files": 150,
+        "valid_images": 150,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 150
+        },
+        "min_width": 450,
+        "max_width": 600,
+        "avg_width": 588.0,
+        "min_height": 270,
+        "max_height": 600,
+        "avg_height": 378.7
+      },
+      "Hibiscus": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Hibiscus",
+        "total_files": 165,
+        "valid_images": 165,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 165
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 399.4
+      },
+      "Honge": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Honge",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 270,
+        "max_height": 450,
+        "avg_height": 304.2
+      },
+      "Insulin": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Insulin",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 277,
+        "max_width": 600,
+        "avg_width": 580.1,
+        "min_height": 450,
+        "max_height": 600,
+        "avg_height": 459.2
+      },
+      "Jasmine": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Jasmine",
+        "total_files": 187,
+        "valid_images": 187,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 187
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 404.5
+      },
+      "Lemon": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 367.6
+      },
+      "Lemon_grass": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Lemon_grass",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 373.4
+      },
+      "Mango": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Mango",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 376.8
+      },
+      "Mint": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Mint",
+        "total_files": 153,
+        "valid_images": 153,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 153
+        },
+        "min_width": 277,
+        "max_width": 600,
+        "avg_width": 434.5,
+        "min_height": 270,
+        "max_height": 600,
+        "avg_height": 504.4
+      },
+      "Nagadali": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nagadali",
+        "total_files": 152,
+        "valid_images": 152,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 152
+        },
+        "min_width": 277,
+        "max_width": 600,
+        "avg_width": 335.4,
+        "min_height": 283,
+        "max_height": 600,
+        "avg_height": 543.7
+      },
+      "Neem": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Neem",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 368.8
+      },
+      "Nithyapushpa": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nithyapushpa",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 450,
+        "max_width": 600,
+        "avg_width": 596.9,
+        "min_height": 390,
+        "max_height": 600,
+        "avg_height": 452.7
+      },
+      "Nooni": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Nooni",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 374.5
+      },
+      "Pappaya": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pappaya",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 376.8
+      },
+      "Pepper": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pepper",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 450,
+        "max_height": 450,
+        "avg_height": 450.0
+      },
+      "Pomegranate": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Pomegranate",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 283,
+        "max_height": 450,
+        "avg_height": 380.2
+      },
+      "Raktachandini": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Raktachandini",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 450,
+        "max_height": 450,
+        "avg_height": 450.0
+      },
+      "Rose": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Rose",
+        "total_files": 168,
+        "valid_images": 168,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 168
+        },
+        "min_width": 450,
+        "max_width": 600,
+        "avg_width": 560.4,
+        "min_height": 283,
+        "max_height": 600,
+        "avg_height": 440.5
+      },
+      "Sapota": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Sapota",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 277,
+        "max_height": 450,
+        "avg_height": 368.2
+      },
+      "Tulasi": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Tulasi",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 277,
+        "max_height": 450,
+        "avg_height": 379.0
+      },
+      "Wood_sorel": {
+        "folder": "C:\\Users\\hardi\\Downloads\\medicinal plants detection\\dataset\\Indian Medicinal Leaves Image Datasets\\Datasets_Plant\\Wood_sorel",
+        "total_files": 146,
+        "valid_images": 146,
+        "corrupted": 0,
+        "corrupted_files": [],
+        "unsupported_files": 0,
+        "modes": {
+          "RGB": 146
+        },
+        "min_width": 600,
+        "max_width": 600,
+        "avg_width": 600.0,
+        "min_height": 450,
+        "max_height": 450,
+        "avg_height": 450.0
+      }
+    }
+  },
+  "comparison": {
+    "common_classes": [
+      {
+        "normalized": "aloevera",
+        "leaf_name": "Aloevera",
+        "plant_name": "Aloevera"
+      },
+      {
+        "normalized": "amla",
+        "leaf_name": "Amla",
+        "plant_name": "Amla"
+      },
+      {
+        "normalized": "arali",
+        "leaf_name": "Arali",
+        "plant_name": "Arali"
+      },
+      {
+        "normalized": "ashoka",
+        "leaf_name": "ashoka",
+        "plant_name": "Ashoka"
+      },
+      {
+        "normalized": "bamboo",
+        "leaf_name": "Bamboo",
+        "plant_name": "Bamboo"
+      },
+      {
+        "normalized": "betel",
+        "leaf_name": "Betel",
+        "plant_name": "Betel"
+      },
+      {
+        "normalized": "bhrami",
+        "leaf_name": "Bhrami",
+        "plant_name": "Brahmi"
+      },
+      {
+        "normalized": "castor",
+        "leaf_name": "Castor",
+        "plant_name": "Castor"
+      },
+      {
+        "normalized": "common rue(naagdalli)",
+        "leaf_name": "Common rue(naagdalli)",
+        "plant_name": "Nagadali"
+      },
+      {
+        "normalized": "doddpathre",
+        "leaf_name": "Doddpathre",
+        "plant_name": "Doddapatre"
+      },
+      {
+        "normalized": "ekka",
+        "leaf_name": "Ekka",
+        "plant_name": "Ekka"
+      },
+      {
+        "normalized": "ganike",
+        "leaf_name": "Ganike",
+        "plant_name": "Ganike"
+      },
+      {
+        "normalized": "guava",
+        "leaf_name": "Guava",
+        "plant_name": "Gauva"
+      },
+      {
+        "normalized": "henna",
+        "leaf_name": "Henna",
+        "plant_name": "Henna"
+      },
+      {
+        "normalized": "hibiscus",
+        "leaf_name": "Hibiscus",
+        "plant_name": "Hibiscus"
+      },
+      {
+        "normalized": "honge",
+        "leaf_name": "Honge",
+        "plant_name": "Honge"
+      },
+      {
+        "normalized": "insulin",
+        "leaf_name": "Insulin",
+        "plant_name": "Insulin"
+      },
+      {
+        "normalized": "jasmine",
+        "leaf_name": "Jasmine",
+        "plant_name": "Jasmine"
+      },
+      {
+        "normalized": "lemon",
+        "leaf_name": "Lemon",
+        "plant_name": "Lemon"
+      },
+      {
+        "normalized": "mango",
+        "leaf_name": "Mango",
+        "plant_name": "Mango"
+      },
+      {
+        "normalized": "mint",
+        "leaf_name": "Mint",
+        "plant_name": "Mint"
+      },
+      {
+        "normalized": "neem",
+        "leaf_name": "Neem",
+        "plant_name": "Neem"
+      },
+      {
+        "normalized": "nooni",
+        "leaf_name": "Nooni",
+        "plant_name": "Nooni"
+      },
+      {
+        "normalized": "papaya",
+        "leaf_name": "Papaya",
+        "plant_name": "Pappaya"
+      },
+      {
+        "normalized": "pepper",
+        "leaf_name": "Pepper",
+        "plant_name": "Pepper"
+      },
+      {
+        "normalized": "pomegranate",
+        "leaf_name": "Pomoegranate",
+        "plant_name": "Pomegranate"
+      },
+      {
+        "normalized": "rose",
+        "leaf_name": "Rose",
+        "plant_name": "Rose"
+      },
+      {
+        "normalized": "sapota",
+        "leaf_name": "Sapota",
+        "plant_name": "Sapota"
+      },
+      {
+        "normalized": "tulsi",
+        "leaf_name": "Tulsi",
+        "plant_name": "Tulasi"
+      }
+    ],
+    "leaf_only_classes": [
+      "Amruthaballi",
+      "Astma_weed",
+      "Badipala",
+      "Balloon_Vine",
+      "Beans",
+      "Bringaraja",
+      "camphor",
+      "Caricature",
+      "Catharanthus",
+      "Chakte",
+      "Chilly",
+      "Citron lime (herelikai)",
+      "Coffee",
+      "Coriender",
+      "Curry",
+      "Drumstick",
+      "Eucalyptus",
+      "Ganigale",
+      "Gasagase",
+      "Ginger",
+      "Globe Amarnath",
+      "Jackfruit",
+      "kamakasturi",
+      "Kambajala",
+      "Kasambruga",
+      "kepala",
+      "Kohlrabi",
+      "Lantana",
+      "Lemongrass",
+      "Malabar_Nut",
+      "Malabar_Spinach",
+      "Marigold",
+      "Nelavembu",
+      "Nerale",
+      "Onion",
+      "Padri",
+      "Palak(Spinach)",
+      "Parijatha",
+      "Pea",
+      "Pumpkin",
+      "Raddish",
+      "Sampige",
+      "Seethaashoka",
+      "Seethapala",
+      "Spinach1",
+      "Tamarind",
+      "Taro",
+      "Tecoma",
+      "Thumbe",
+      "Tomato",
+      "Turmeric"
+    ],
+    "plant_only_classes": [
+      "Amruta_Balli",
+      "Ashwagandha",
+      "Avacado",
+      "Basale",
+      "Betel_Nut",
+      "Curry_Leaf",
+      "Geranium",
+      "Lemon_grass",
+      "Nithyapushpa",
+      "Raktachandini",
+      "Wood_sorel"
+    ],
+    "cross_dataset_duplicates": []
+  }
+}
