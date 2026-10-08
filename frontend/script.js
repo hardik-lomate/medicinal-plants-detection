@@ -485,26 +485,32 @@ document.addEventListener('DOMContentLoaded', () => {
         if (status === 'unknown') {
             resultContent.innerHTML = `
                 <div class="notice-card notice-warning">
-                    <h3>Species Not Confidently Recognized</h3>
-                    <p>${escapeHtml(data.message || 'The photograph does not strongly match any cataloged botanical species in the model database.')}</p>
-                    <p style="font-size: 0.8125rem; color: #7B5113; margin-top: 8px;">
-                        The model detected low morphological similarity with our 90 Indian medicinal and botanical reference classes.
-                    </p>
+                    <h3>Image Not Recognized as a Plant</h3>
+                    <p>${escapeHtml(data.message || 'The uploaded image does not appear to contain a recognizable plant or leaf.')}</p>
+                    <div style="margin-top: 16px; font-size: 0.8125rem; line-height: 1.6; color: #7B5113;">
+                        <strong>For best results, please upload:</strong>
+                        <ul style="padding-left: 20px; margin-top: 6px;">
+                            <li>A clear photograph of a plant leaf or whole plant specimen.</li>
+                            <li>Well-lit image with the plant clearly visible and centered.</li>
+                            <li>Not a map, logo, screenshot, document, or non-plant object.</li>
+                        </ul>
+                    </div>
                 </div>
 
-                ${renderAlternativesAccordion(alternatives, 'Nearest candidate classifications')}
+                ${alternatives && alternatives.length > 0 ? renderAlternativesAccordion(alternatives, 'Nearest candidate classifications (low confidence)') : ''}
 
                 ${data.disclaimer ? `<p class="footer-disclaimer" style="margin-top: 20px;">${escapeHtml(data.disclaimer)}</p>` : ''}
 
                 <div class="result-actions-bottom">
                     <button type="button" class="btn btn-secondary btn-block" onclick="document.getElementById('reset-btn').click()">
-                        Upload a different specimen
+                        Upload a plant photograph
                     </button>
                 </div>
             `;
             resultSection.classList.remove('hidden');
             return;
         }
+
 
         // --- State C: Uncertain Identification ---
         if (status === 'uncertain') {

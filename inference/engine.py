@@ -272,6 +272,12 @@ def predict_baseline(
     with torch.no_grad():
         logits = spec_model(tensor)
         probs = torch.softmax(logits, dim=1)[0]
+        # Compute OOD detection signals from raw logits
+        _logits_1d = logits[0]
+        _energy_score = float(torch.logsumexp(_logits_1d, dim=0).item())
+        _entropy = float(-(probs * torch.log(probs + 1e-10)).sum().item())
+        _max_entropy = float(np.log(len(spec_classes)))
+        _normalized_entropy = float(_entropy / _max_entropy) if _max_entropy > 0 else 0.0
 
     top1_idx = probs.argmax().item()
     top1_raw_class = spec_classes[top1_idx]
@@ -297,7 +303,66 @@ def predict_baseline(
     p2 = top_candidates[1]["confidence"] if len(top_candidates) > 1 else 0.0
     margin = round(max(0.0, p1 - p2), 4)
 
-    # 4. Class Normalization & Database Lookup
+    # 4. Early OOD Gate (before database lookup to save work)
+    # Empirical thresholds: plant min=0.102, OOD max=0.049 — full gap, no overlap
+    _OOD_SOFTMAX_THRESHOLD = 0.065   # midpoint with 24% margin above OOD max
+    _OOD_ENTROPY_THRESHOLD = 0.930   # OOD entropy 0.945-0.997, plants 0.06-0.88
+
+    is_early_ood = (
+        top1_conf < _OOD_SOFTMAX_THRESHOLD or
+        (_normalized_entropy > _OOD_ENTROPY_THRESHOLD and top1_conf < 0.08)
+    )
+
+    if is_early_ood:
+        if debug:
+            debug_log["5_selected_model"] = specialist_key
+            debug_log["6_model_class_count"] = len(spec_classes)
+            debug_log["7_OOD_REJECTION"] = "TRUE — near-uniform softmax distribution"
+            debug_log["8_ood_max_softmax"] = f"{top1_conf:.4f}"
+            debug_log["9_ood_normalized_entropy"] = f"{_normalized_entropy:.4f}"
+            debug_log["10_ood_energy_score"] = f"{_energy_score:.3f}"
+
+        return {
+            "success": True,
+            "status": "unknown",
+            "input_type": detected_type,
+            "input_type_confidence": float(round(type_confidence, 4)),
+            "plant_name": None,
+            "raw_class": None,
+            "scientific_name": "",
+            "confidence": float(round(top1_conf, 4)),
+            "margin": float(round(margin, 4)),
+            "confidence_tier": "OOD",
+            "confidence_interpretation": (
+                f"Near-uniform distribution (max softmax: {top1_conf:.3f}, "
+                f"normalized entropy: {_normalized_entropy:.3f}). "
+                "Input does not resemble any cataloged botanical species."
+            ),
+            "prediction_stability": 1.0,
+            "image_quality": 1.0,
+            "embedding_similarity": 0.50,
+            "normalized_entropy": float(round(_normalized_entropy, 4)),
+            "energy_score": float(round(_energy_score, 3)),
+            "is_medicinal": False,
+            "medicinal_information_available": False,
+            "database_match": False,
+            "message": (
+                "The uploaded image does not appear to contain a recognizable plant or leaf. "
+                "Please upload a clear photograph of a plant or leaf specimen."
+            ),
+            "top_predictions": top_candidates[:3],
+            "description": "",
+            "medicinal_uses": [],
+            "traditional_uses": [],
+            "parts_used": [],
+            "precautions": [],
+            "sources": [],
+            "explanation_available": False,
+            "explanation_image": None,
+            "debug_info": debug_log if debug else None
+        }
+
+    # 5. Class Normalization & Database Lookup
     display_name, scientific_name, db_key = normalize_plant_name(top1_raw_class)
 
     from backend.database import get_plant_info
@@ -324,7 +389,9 @@ def predict_baseline(
         debug_log["9_database_lookup_key"] = db_key
         debug_log["10_database_match_result"] = "FOUND" if has_db_match else "NOT_FOUND"
         debug_log["11_final_confidence"] = f"{top1_conf:.1%}"
-        debug_log["12_final_returned_status"] = status
+        debug_log["12_normalized_entropy"] = f"{_normalized_entropy:.4f}"
+        debug_log["13_energy_score"] = f"{_energy_score:.3f}"
+        debug_log["14_final_returned_status"] = status
 
     return {
         "success": True,
@@ -341,6 +408,8 @@ def predict_baseline(
         "prediction_stability": 1.0,
         "image_quality": 1.0,
         "embedding_similarity": 0.50,
+        "normalized_entropy": float(round(_normalized_entropy, 4)),
+        "energy_score": float(round(_energy_score, 3)),
         "is_medicinal": is_medicinal,
         "medicinal_information_available": has_med_info,
         "database_match": has_db_match,
@@ -356,6 +425,7 @@ def predict_baseline(
         "explanation_image": None,
         "debug_info": debug_log if debug else None
     }
+
 
 
 def predict_pipeline(
@@ -437,7 +507,7 @@ def predict_pipeline(
     baseline_res["embedding_similarity"] = float(round(embedding_sim, 4))
 
     # 6. Diagnostic Grad-CAM Explainability Heatmap
-    if generate_explanation and target_entry:
+    if generate_explanation and target_entry and baseline_res.get("status") not in ("unknown", "bad_image"):
         try:
             raw_cls = baseline_res.get("raw_class", "")
             target_class_idx = target_entry['class_to_index'].get(raw_cls, 0)
@@ -455,7 +525,14 @@ def predict_pipeline(
             if debug and baseline_res.get("debug_info"):
                 baseline_res["debug_info"]["gradcam_error"] = str(e)
 
-    # 7. Multi-Signal Decision Synthesis (Preserves model prediction!)
+    # 7. Multi-Signal Decision Synthesis
+    # If baseline already detected OOD, preserve the unknown status and skip re-evaluation
+    if baseline_res.get("status") == "unknown":
+        baseline_res["decision_reason"] = baseline_res.get(
+            "confidence_interpretation", "OOD detected by baseline inference."
+        )
+        return baseline_res
+
     decision = DEFAULT_DECISION_ENGINE.evaluate(
         confidence=baseline_res["confidence"],
         margin=baseline_res["margin"],
@@ -465,13 +542,20 @@ def predict_pipeline(
         embedding_similarity=embedding_sim,
         has_database_match=baseline_res["database_match"],
         has_medicinal_info=baseline_res["medicinal_information_available"],
-        plant_display_name=baseline_res["plant_name"],
-        threshold_override=threshold
+        plant_display_name=baseline_res.get("plant_name", ""),
+        threshold_override=threshold,
+        normalized_entropy=baseline_res.get("normalized_entropy"),
+        energy_score=baseline_res.get("energy_score"),
     )
 
     baseline_res["status"] = decision.status
     baseline_res["decision_reason"] = decision.decision_reason
     baseline_res["message"] = decision.user_message
+
+    # If OOD engine also triggers unknown, clear plant identity
+    if decision.is_ood:
+        baseline_res["plant_name"] = None
+        baseline_res["scientific_name"] = ""
 
     if debug and baseline_res.get("debug_info"):
         dbg = baseline_res["debug_info"]
@@ -481,3 +565,4 @@ def predict_pipeline(
         dbg["decision_reason"] = decision.decision_reason
 
     return baseline_res
+
