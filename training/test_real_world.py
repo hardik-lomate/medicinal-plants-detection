@@ -33,8 +33,8 @@ def main():
     parser.add_argument("--image", "-i", dest="opt_image", default=None, help="Explicit path to input plant image")
     parser.add_argument("--type", "-t", dest="input_type", choices=["leaf", "whole_plant", "auto"], default=None,
                         help="Optional override for plant type")
-    parser.add_argument("--tta", choices=["off", "fast", "standard", "thorough"], default="fast",
-                        help="Test-time augmentation mode")
+    parser.add_argument("--tta", choices=["off", "fast", "standard", "thorough"], default="off",
+                        help="Test-time augmentation mode (defaults to off for baseline accuracy)")
     parser.add_argument("--threshold", type=float, default=None, help="Confidence threshold override")
     parser.add_argument("--debug", action="store_true", help="Enable comprehensive pipeline diagnostic output")
 

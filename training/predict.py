@@ -1,11 +1,12 @@
 """
 training/predict.py
 ====================
-Robust Individual Image Prediction CLI Script.
+Robust Individual Image Prediction CLI Script with Step 16 Debug Diagnostic Mode.
 
 Supports:
     python training/predict.py "C:\\Users\\hardi\\Downloads\\tulsi.jpg"
-    python training/predict.py --image "C:\\Users\\hardi\\Downloads\\tulsi.jpg" --debug
+    python training/predict.py "C:\\Users\\hardi\\Downloads\\tulsi.jpg" --debug
+    python training/predict.py "C:\\Users\\hardi\\Downloads\\tulsi.jpg" --baseline
     python training/predict.py "C:\\Users\\hardi\\Downloads\\tulsi.jpg" --type leaf
 """
 
@@ -24,7 +25,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8')
 
-from backend.model import predict_image, clean_image_path
+from backend.model import predict_image, predict_baseline_image, clean_image_path
 
 
 def main():
@@ -33,8 +34,10 @@ def main():
     parser.add_argument("--image", "-i", dest="opt_image", default=None, help="Explicit path to input plant image")
     parser.add_argument("--type", "-t", dest="input_type", choices=["leaf", "whole_plant", "auto"], default=None,
                         help="Optional override for plant type")
+    parser.add_argument("--baseline", action="store_true", help="Force direct Step 1 predict_baseline evaluation")
+    parser.add_argument("--tta", choices=["off", "fast", "standard"], default="off", help="TTA mode")
     parser.add_argument("--threshold", type=float, default=None, help="Confidence threshold override")
-    parser.add_argument("--debug", action="store_true", help="Enable 12-point pipeline diagnostic output")
+    parser.add_argument("--debug", action="store_true", help="Enable Step 16 debug prediction mode")
 
     args = parser.parse_args()
 
@@ -47,7 +50,7 @@ def main():
     # 1. Clean and validate image path
     is_valid, resolved_path, error_msg = clean_image_path(raw_path)
 
-    # 2. Print required image pre-prediction inspection block
+    # 2. Print initial pre-prediction inspection block
     print(f"\nImage path:       {resolved_path or raw_path}")
     print(f"Image exists:     {is_valid}")
 
@@ -59,34 +62,48 @@ def main():
         with Image.open(resolved_path) as img:
             img_format = img.format or os.path.splitext(resolved_path)[1].lstrip('.').upper()
             img_w, img_h = img.size
-            print(f"Image type:       {img_format}")
+            print(f"Image format:     {img_format}")
             print(f"Image dimensions: {img_w}x{img_h}")
     except Exception as e:
-        print(f"Image type:       Unknown")
+        print(f"Image format:     Unknown")
         print(f"Image dimensions: Unknown ({e})")
 
-    # 3. Run prediction pipeline
+    # 3. Run baseline prediction first
     forced_type = args.input_type if args.input_type in ["leaf", "whole_plant"] else None
-    result = predict_image(resolved_path, forced_type=forced_type, debug=args.debug, threshold=args.threshold)
+    baseline_result = predict_baseline_image(resolved_path, forced_type=forced_type, debug=args.debug)
 
-    # 4. If debug, display the 12 diagnostic points
-    if args.debug and result.get("debug_info"):
-        dbg = result["debug_info"]
+    if args.baseline:
+        result = baseline_result
+    else:
+        from inference.engine import predict_pipeline
+        result = predict_pipeline(
+            resolved_path,
+            forced_type=forced_type,
+            tta_mode=args.tta,
+            generate_explanation=True,
+            debug=args.debug,
+            threshold=args.threshold
+        )
+
+    # 4. STEP 16: Required Debug Diagnostic Mode
+    if args.debug:
+        top3_strs = [f"{p['name']} ({p['confidence']:.1%})" for p in result.get("top_predictions", [])[:3]]
+        dbg = result.get("debug_info") or {}
+
         print(f"\n{'='*60}")
-        print("PIPELINE DEBUG DIAGNOSTICS (12 Checkpoints)")
+        print("DEBUG PREDICTION MODE (Step 16 Diagnostics)")
         print(f"{'='*60}")
-        print(f"1. Image path:               {dbg.get('1_image_path', 'N/A')}")
-        print(f"2. Image dimensions:         {dbg.get('2_image_dimensions', 'N/A')} ({dbg.get('image_mode', 'N/A')})")
-        print(f"3. Image-type prediction:    {dbg.get('3_image_type_prediction', 'N/A')}")
-        print(f"4. Image-type confidence:    {dbg.get('4_image_type_confidence', 'N/A')}")
-        print(f"5. Selected model:           {dbg.get('5_selected_model', 'N/A')}")
-        print(f"6. Model class count:        {dbg.get('6_model_class_count', 'N/A')}")
-        print(f"7. Top-5 plant predictions:  {', '.join(dbg.get('7_top_5_plant_predictions', []))}")
-        print(f"8. Normalized plant name:    {dbg.get('8_normalized_plant_name', 'N/A')}")
-        print(f"9. Database lookup key:      {dbg.get('9_database_lookup_key', 'N/A')}")
-        print(f"10. Database match result:   {dbg.get('10_database_match_result', 'N/A')}")
-        print(f"11. Final confidence:        {dbg.get('11_final_confidence', 'N/A')}")
-        print(f"12. Final returned status:   {dbg.get('12_final_returned_status', 'N/A')}")
+        print(f"Image:                 {resolved_path}")
+        print(f"Image type:            {result.get('input_type', 'N/A')}")
+        print(f"Image quality:         {result.get('image_quality', 1.0):.2f}")
+        print(f"Model used:            {dbg.get('5_selected_model', result.get('input_type', 'specialist'))}")
+        print(f"Predicted class:       {result.get('plant_name') or 'N/A'}")
+        print(f"Top-1 probability:     {result.get('confidence', 0.0):.1%}")
+        print(f"Top-3 predictions:     {', '.join(top3_strs)}")
+        print(f"Prediction margin:     {result.get('margin', 0.0):.1%}")
+        print(f"TTA result if enabled: {args.tta} (Stability: {result.get('prediction_stability', 1.0):.1%})")
+        print(f"Baseline result:       {baseline_result.get('plant_name')} ({baseline_result.get('confidence', 0.0):.1%})")
+        print(f"Final result:          {result.get('plant_name')} ({result.get('confidence', 0.0):.1%})")
         print(f"{'='*60}")
 
     # 5. Format user-facing output

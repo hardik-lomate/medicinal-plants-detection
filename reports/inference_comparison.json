@@ -1,0 +1,47 @@
+{
+  "image_type": {
+    "model": "image_type",
+    "samples_evaluated": 200,
+    "baseline_accuracy": 0.99,
+    "modified_accuracy": 0.99,
+    "difference": 0.0,
+    "baseline_macro_f1": 0.99,
+    "modified_macro_f1": 0.99,
+    "baseline_top3": 1.0,
+    "modified_top3": 1.0,
+    "number_of_changed_predictions": 0,
+    "number_of_regressions": 0,
+    "number_of_improvements": 0,
+    "verdict": "RETAIN_MODIFICATION"
+  },
+  "whole_plant": {
+    "model": "whole_plant",
+    "samples_evaluated": 200,
+    "baseline_accuracy": 0.945,
+    "modified_accuracy": 0.945,
+    "difference": 0.0,
+    "baseline_macro_f1": 0.8267,
+    "modified_macro_f1": 0.8267,
+    "baseline_top3": 0.99,
+    "modified_top3": 0.99,
+    "number_of_changed_predictions": 0,
+    "number_of_regressions": 0,
+    "number_of_improvements": 0,
+    "verdict": "RETAIN_MODIFICATION"
+  },
+  "leaf": {
+    "model": "leaf",
+    "samples_evaluated": 200,
+    "baseline_accuracy": 0.895,
+    "modified_accuracy": 0.895,
+    "difference": 0.0,
+    "baseline_macro_f1": 0.8211,
+    "modified_macro_f1": 0.8211,
+    "baseline_top3": 0.97,
+    "modified_top3": 0.97,
+    "number_of_changed_predictions": 0,
+    "number_of_regressions": 0,
+    "number_of_improvements": 0,
+    "verdict": "RETAIN_MODIFICATION"
+  }
+}

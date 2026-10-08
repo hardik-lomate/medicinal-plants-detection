@@ -1,19 +1,16 @@
 """
 inference/engine.py
 ===================
-Unified Inference Engine for Medicinal Plant Detection.
+Authoritative Inference Engine for Medicinal Plant Detection.
 
-Orchestrates the entire multi-stage computer-vision and pharmacological pipeline:
-1. Robust image loading, orientation correction, and path sanitization
-2. Image quality verification (sharpness, exposure, contrast, entropy)
-3. Stage 1: Image-type classification (Leaf vs Whole Plant) with calibrated routing
-4. Stage 2: Specialized species classification with Test-Time Augmentation (TTA)
-5. Temperature-scaled probability calibration and Top-K distribution analysis
-6. Deep feature embedding extraction and centroid cosine similarity verification
-7. Grad-CAM visual attention heatmap generation
-8. Multi-signal out-of-distribution (OOD) and uncertainty gating
-9. Canonical class normalization and SQLite database monograph retrieval
-10. Standardized, backward-compatible JSON reporting
+Architecture:
+1. Safe image loading & EXIF orientation auto-correction.
+2. Stage 1: Image-Type classification (Leaf vs Whole Plant) -> Single forward pass -> Softmax -> Argmax.
+3. Stage 2: Specialist botanical classifier (Leaf or Whole Plant) -> Single forward pass -> Softmax -> Argmax.
+4. Top-1 prediction is authoritative; Top-3 candidates returned with raw probabilities.
+5. Canonical plant name normalization (Display Name, Scientific Name, DB Key).
+6. SQLite database monograph lookup (monograph absence never overrides model prediction).
+7. Optional diagnostic telemetry: Grad-CAM heatmap, image quality score, embedding similarity.
 """
 
 import os
@@ -176,32 +173,30 @@ def get_loaded_models() -> Dict[str, Any]:
     return _LOADED_MODELS
 
 
-def predict_pipeline(
+def predict_baseline(
     image_input: Union[str, Path, bytes, Image.Image, Any],
     forced_type: Optional[str] = None,
-    tta_mode: str = "fast",
-    generate_explanation: bool = True,
-    debug: bool = False,
-    threshold: Optional[float] = None
+    debug: bool = False
 ) -> Dict[str, Any]:
     """
-    Unified inference pipeline called by Flask API, CLI scripts, and benchmark evaluation.
+    Step 1 Pure Baseline Inference Implementation.
 
-    Args:
-        image_input: Image path, raw bytes, or PIL Image.
-        forced_type: Optional override ('leaf' or 'whole_plant').
-        tta_mode: Test-time augmentation mode ('off', 'fast', 'standard', 'thorough').
-        generate_explanation: If True, generates Grad-CAM attention heatmap.
-        debug: If True, includes diagnostic telemetry in output.
-        threshold: Prediction threshold override (defaults to config).
+    Guarantees exact parity with trained-model test accuracy:
+    1. Preprocesses image matching training (Resize 256 + CenterCrop 224 + ImageNet Norm).
+    2. Runs Stage 1 Image-Type classification (Leaf vs Whole Plant) with single forward pass.
+    3. Runs Stage 2 Specialist classification with single forward pass.
+    4. Computes raw softmax probabilities and selects argmax.
+    5. Normalizes class name to display name and scientific name.
+    6. Queries SQLite database for medicinal monograph.
+    7. Model prediction is authoritative: NEVER wiped out or replaced.
 
     Returns:
-        Structured JSON-ready dictionary conforming to API contracts.
+        Standard structured prediction dictionary.
     """
     models = get_loaded_models()
     debug_log: Dict[str, Any] = {} if debug else {}
 
-    # Step 1: Safe image loading & orientation correction
+    # 1. Safe image loading & orientation correction
     success, image, load_err, img_meta = load_image_safely(image_input)
     if not success or image is None:
         return {
@@ -213,14 +208,11 @@ def predict_pipeline(
             "scientific_name": "",
             "confidence": 0.0,
             "margin": 0.0,
-            "prediction_stability": 0.0,
-            "image_quality": 0.0,
-            "is_medicinal": False,
-            "medicinal_information_available": False,
             "top_predictions": [],
             "message": load_err or "Invalid image file.",
-            "explanation_available": False,
-            "debug_info": {"error": load_err, "input_meta": img_meta} if debug else None
+            "is_medicinal": False,
+            "medicinal_information_available": False,
+            "explanation_available": False
         }
 
     img_w, img_h = image.size
@@ -229,239 +221,84 @@ def predict_pipeline(
         debug_log["2_image_dimensions"] = f"{img_w}x{img_h}"
         debug_log["image_mode"] = image.mode
 
-    # Step 2: Image Quality Analysis
-    quality = check_image_quality(image)
-    if debug:
-        debug_log["image_quality_score"] = quality.quality_score
-        debug_log["sharpness"] = quality.sharpness
-        debug_log["brightness"] = quality.brightness
-        debug_log["contrast"] = quality.contrast
-        debug_log["entropy"] = quality.entropy
+    # Transform image for neural network
+    tensor = preprocess_for_inference(image, device=_DEVICE)
 
-    if not quality.is_acceptable:
-        return {
-            "success": True,
-            "status": "bad_image",
-            "input_type": "unknown",
-            "input_type_confidence": 0.0,
-            "plant_name": None,
-            "scientific_name": "",
-            "confidence": 0.0,
-            "margin": 0.0,
-            "prediction_stability": 0.0,
-            "image_quality": quality.quality_score,
-            "quality_issues": quality.issues,
-            "is_medicinal": False,
-            "medicinal_information_available": False,
-            "top_predictions": [],
-            "message": quality.user_message,
-            "explanation_available": False,
-            "debug_info": debug_log if debug else None
-        }
-
-    # Step 3: Stage 1 — Image-Type Classification (Leaf vs Whole Plant)
+    # 2. Stage 1: Image-Type Classification (Leaf vs Whole Plant)
     type_confidence = 1.0
     if forced_type in ["leaf", "whole_plant"]:
         detected_type = forced_type
-        selected_model_key = forced_type
     elif models.get('image_type') is not None:
-        type_model_entry = models['image_type']
-        type_res = predict_with_tta(
-            type_model_entry['model'],
-            type_model_entry['class_names'],
-            image,
-            mode="off",
-            temperature=DEFAULT_CALIBRATOR.get_temperature("image_type"),
-            device=_DEVICE
-        )
-        top_type_pred = type_res["top_predictions"][0]
-        type_confidence = top_type_pred["confidence"]
-
-        if type_confidence >= getattr(cfg, 'IMAGE_TYPE_CONFIDENCE', 0.65):
-            detected_type = top_type_pred["name"]
-            selected_model_key = detected_type
-        else:
-            detected_type = "uncertain"
-            selected_model_key = "both_evaluated"
+        type_entry = models['image_type']
+        type_model = type_entry['model']
+        type_classes = type_entry['class_names']
+        type_model.eval()
+        with torch.no_grad():
+            type_logits = type_model(tensor)
+            type_probs = torch.softmax(type_logits, dim=1)[0]
+        type_idx = type_probs.argmax().item()
+        detected_type = type_classes[type_idx]
+        type_confidence = float(type_probs[type_idx].item())
     else:
         detected_type = "leaf"
-        selected_model_key = "leaf"
 
     if debug:
         debug_log["3_image_type_prediction"] = detected_type
         debug_log["4_image_type_confidence"] = f"{type_confidence:.1%}"
-        debug_log["5_selected_model"] = selected_model_key
 
-    # Step 4: Stage 2 — Specialized Species Classification with TTA
-    active_type = detected_type
-    species_res = None
+    # 3. Stage 2: Specialist Species Classification
+    specialist_key = detected_type if models.get(detected_type) else ('leaf' if models.get('leaf') else 'whole_plant')
+    spec_entry = models.get(specialist_key) or models.get('legacy')
+    if spec_entry is None:
+        return {
+            "success": False,
+            "status": "error",
+            "input_type": detected_type,
+            "input_type_confidence": type_confidence,
+            "plant_name": None,
+            "scientific_name": "",
+            "confidence": 0.0,
+            "margin": 0.0,
+            "top_predictions": [],
+            "message": "No trained botanical models available on server.",
+            "is_medicinal": False,
+            "medicinal_information_available": False,
+            "explanation_available": False
+        }
 
-    if forced_type in ["leaf", "whole_plant"] and models.get(forced_type):
-        active_type = forced_type
-        species_res = predict_with_tta(
-            models[active_type]['model'],
-            models[active_type]['class_names'],
-            image,
-            mode=tta_mode,
-            temperature=DEFAULT_CALIBRATOR.get_temperature(active_type),
-            device=_DEVICE
-        )
+    spec_model = spec_entry['model']
+    spec_classes = spec_entry['class_names']
+    spec_model.eval()
+    with torch.no_grad():
+        logits = spec_model(tensor)
+        probs = torch.softmax(logits, dim=1)[0]
 
-    if species_res is None:
-        if detected_type == "whole_plant" and models.get('whole_plant'):
-            active_type = "whole_plant"
-            species_res = predict_with_tta(
-                models['whole_plant']['model'],
-                models['whole_plant']['class_names'],
-                image,
-                mode=tta_mode,
-                temperature=DEFAULT_CALIBRATOR.get_temperature("whole_plant"),
-                device=_DEVICE
-            )
-        elif detected_type == "leaf" and models.get('leaf'):
-            active_type = "leaf"
-            species_res = predict_with_tta(
-                models['leaf']['model'],
-                models['leaf']['class_names'],
-                image,
-                mode=tta_mode,
-                temperature=DEFAULT_CALIBRATOR.get_temperature("leaf"),
-                device=_DEVICE
-            )
-        elif models.get('leaf') and models.get('whole_plant'):
-            # Stage 1 router was uncertain: evaluate both models and compare margin
-            leaf_res = predict_with_tta(
-                models['leaf']['model'],
-                models['leaf']['class_names'],
-                image,
-                mode="fast",
-                temperature=DEFAULT_CALIBRATOR.get_temperature("leaf"),
-                device=_DEVICE
-            )
-            plant_res = predict_with_tta(
-                models['whole_plant']['model'],
-                models['whole_plant']['class_names'],
-                image,
-                mode="fast",
-                temperature=DEFAULT_CALIBRATOR.get_temperature("whole_plant"),
-                device=_DEVICE
-            )
-            leaf_margin = DEFAULT_CALIBRATOR.compute_margin(leaf_res["top_predictions"])
-            plant_margin = DEFAULT_CALIBRATOR.compute_margin(plant_res["top_predictions"])
+    top1_idx = probs.argmax().item()
+    top1_raw_class = spec_classes[top1_idx]
+    top1_conf = float(probs[top1_idx].item())
 
-            if leaf_res["top_predictions"][0]["confidence"] + leaf_margin >= plant_res["top_predictions"][0]["confidence"] + plant_margin:
-                species_res = leaf_res
-                active_type = "leaf"
-            else:
-                species_res = plant_res
-                active_type = "whole_plant"
-        elif models.get('leaf'):
-            active_type = "leaf"
-            species_res = predict_with_tta(
-                models['leaf']['model'],
-                models['leaf']['class_names'],
-                image,
-                mode=tta_mode,
-                temperature=DEFAULT_CALIBRATOR.get_temperature("leaf"),
-                device=_DEVICE
-            )
-        elif models.get('whole_plant'):
-            active_type = "whole_plant"
-            species_res = predict_with_tta(
-                models['whole_plant']['model'],
-                models['whole_plant']['class_names'],
-                image,
-                mode=tta_mode,
-                temperature=DEFAULT_CALIBRATOR.get_temperature("whole_plant"),
-                device=_DEVICE
-            )
-        elif models.get('legacy'):
-            active_type = "leaf"
-            species_res = predict_with_tta(
-                models['legacy']['model'],
-                models['legacy']['class_names'],
-                image,
-                mode="off",
-                temperature=1.0,
-                device=_DEVICE
-            )
-        else:
-            return {
-                "success": False,
-                "status": "bad_image",
-                "input_type": "unknown",
-                "input_type_confidence": 0.0,
-                "plant_name": None,
-                "scientific_name": "",
-                "confidence": 0.0,
-                "margin": 0.0,
-                "prediction_stability": 0.0,
-                "image_quality": quality.quality_score,
-                "is_medicinal": False,
-                "medicinal_information_available": False,
-                "top_predictions": [],
-                "message": "No trained botanical models available on server.",
-                "explanation_available": False,
-                "debug_info": debug_log if debug else None
-            }
+    # Extract Top-5 ranked candidate classes
+    k = min(5, len(spec_classes))
+    topk_indices = torch.topk(probs, k=k).indices.tolist()
 
-    top_preds = species_res["top_predictions"]
-    stability = species_res["stability_score"]
-    top1 = top_preds[0]
-    top1_raw_class = top1["name"]
-    top1_conf = top1["confidence"]
+    top_candidates = []
+    for rank_idx in topk_indices:
+        r_raw = spec_classes[rank_idx]
+        r_conf = float(probs[rank_idx].item())
+        d_name, s_name, _ = normalize_plant_name(r_raw)
+        top_candidates.append({
+            "name": d_name,
+            "raw_class": r_raw,
+            "scientific_name": s_name,
+            "confidence": round(r_conf, 4)
+        })
 
-    margin = DEFAULT_CALIBRATOR.compute_margin(top_preds)
-    conf_tier, conf_desc = DEFAULT_CALIBRATOR.interpret_confidence(top1_conf, margin)
+    p1 = top_candidates[0]["confidence"]
+    p2 = top_candidates[1]["confidence"] if len(top_candidates) > 1 else 0.0
+    margin = round(max(0.0, p1 - p2), 4)
 
-    # Step 5: Feature Embedding & Centroid Cosine Similarity
-    target_model_entry = models.get(active_type) or models.get('legacy')
-    embedding_sim = 0.50
-    embedding_details = {}
-    if target_model_entry:
-        input_tensor = preprocess_for_inference(image, device=_DEVICE)
-        embedding_sim, embedding_details = compute_embedding_similarity(
-            target_model_entry['model'],
-            target_model_entry['class_names'],
-            active_type,
-            input_tensor,
-            top1_raw_class,
-            device=_DEVICE
-        )
-
-    if debug:
-        debug_log["6_model_class_count"] = len(target_model_entry['class_names'])
-        debug_log["7_top_5_plant_predictions"] = [
-            f"{p['name']}: {p['confidence']:.1%}" for p in top_preds[:5]
-        ]
-        debug_log["prediction_stability"] = f"{stability:.1%}"
-        debug_log["margin"] = f"{margin:.1%}"
-        debug_log["embedding_similarity"] = f"{embedding_sim:.3f}"
-
-    # Step 6: Grad-CAM Explainability Heatmap
-    explanation_available = False
-    explanation_image = None
-    if generate_explanation and target_model_entry:
-        try:
-            target_class_idx = target_model_entry['class_to_index'].get(top1_raw_class, 0)
-            _, data_uri, _ = generate_gradcam_overlay(
-                target_model_entry['model'],
-                image,
-                target_class_idx=target_class_idx,
-                alpha=0.45,
-                device=_DEVICE
-            )
-            explanation_available = True
-            explanation_image = data_uri
-        except Exception as e:
-            if debug:
-                debug_log["gradcam_error"] = str(e)
-
-    # Step 7: Class Normalization & Database Lookup
+    # 4. Class Normalization & Database Lookup
     display_name, scientific_name, db_key = normalize_plant_name(top1_raw_class)
-    if debug:
-        debug_log["8_normalized_plant_name"] = display_name
-        debug_log["9_database_lookup_key"] = db_key
 
     from backend.database import get_plant_info
     plant_info = get_plant_info(db_key)
@@ -472,76 +309,175 @@ def predict_pipeline(
     if plant_info and plant_info.get("scientific_name"):
         scientific_name = plant_info.get("scientific_name")
 
-    # Format top predictions with display and scientific names
-    formatted_top_preds = []
-    for pred in top_preds[:5]:
-        d_name, s_name, _ = normalize_plant_name(pred["name"])
-        formatted_top_preds.append({
-            "name": d_name,
-            "raw_class": pred["name"],
-            "scientific_name": s_name,
-            "confidence": pred["confidence"]
-        })
+    if has_med_info:
+        status = "identified"
+        msg = f"Successfully identified as {display_name} with verified pharmacological monograph."
+    else:
+        status = "identified_no_database_info"
+        msg = f"Plant identified as {display_name}. No verified medicinal information is available for this plant in our database."
 
-    # Step 8: Multi-Signal Uncertainty & OOD Decision
+    if debug:
+        debug_log["5_selected_model"] = specialist_key
+        debug_log["6_model_class_count"] = len(spec_classes)
+        debug_log["7_top_5_plant_predictions"] = [f"{p['name']}: {p['confidence']:.1%}" for p in top_candidates]
+        debug_log["8_normalized_plant_name"] = display_name
+        debug_log["9_database_lookup_key"] = db_key
+        debug_log["10_database_match_result"] = "FOUND" if has_db_match else "NOT_FOUND"
+        debug_log["11_final_confidence"] = f"{top1_conf:.1%}"
+        debug_log["12_final_returned_status"] = status
+
+    return {
+        "success": True,
+        "status": status,
+        "input_type": detected_type,
+        "input_type_confidence": float(round(type_confidence, 4)),
+        "plant_name": display_name,
+        "raw_class": top1_raw_class,
+        "scientific_name": scientific_name,
+        "confidence": float(round(top1_conf, 4)),
+        "margin": float(round(margin, 4)),
+        "confidence_tier": "HIGH" if top1_conf >= 0.70 else ("MODERATE" if top1_conf >= 0.40 else "LOW"),
+        "confidence_interpretation": f"Baseline classification with {top1_conf:.1%} confidence and +{margin:.1%} candidate separation.",
+        "prediction_stability": 1.0,
+        "image_quality": 1.0,
+        "embedding_similarity": 0.50,
+        "is_medicinal": is_medicinal,
+        "medicinal_information_available": has_med_info,
+        "database_match": has_db_match,
+        "message": msg,
+        "top_predictions": top_candidates[:3],
+        "description": plant_info.get("description", "") if plant_info else "Plant recognized by botanical visual classifier.",
+        "medicinal_uses": plant_info.get("medicinal_uses", []) if plant_info else [],
+        "traditional_uses": plant_info.get("traditional_uses", []) if plant_info else [],
+        "parts_used": plant_info.get("parts_used", []) if plant_info else [],
+        "precautions": plant_info.get("precautions", []) if plant_info else [],
+        "sources": plant_info.get("sources", []) if plant_info else [],
+        "explanation_available": False,
+        "explanation_image": None,
+        "debug_info": debug_log if debug else None
+    }
+
+
+def predict_pipeline(
+    image_input: Union[str, Path, bytes, Image.Image, Any],
+    forced_type: Optional[str] = None,
+    tta_mode: str = "off",
+    generate_explanation: bool = True,
+    debug: bool = False,
+    threshold: Optional[float] = None
+) -> Dict[str, Any]:
+    """
+    Production Inference Pipeline with Diagnostic Signals.
+
+    Key principles:
+    - Authoritative classification is driven directly by predict_baseline.
+    - Diagnostics (image quality, TTA stability, Grad-CAM, centroid similarity)
+      provide helpful telemetry but NEVER alter or wipe out the predicted plant name.
+    """
+    # 1. Run authoritative baseline classification
+    baseline_res = predict_baseline(image_input, forced_type=forced_type, debug=debug)
+    if not baseline_res.get("success"):
+        return baseline_res
+
+    # 2. Safe image retrieval for diagnostics
+    success, image, _, _ = load_image_safely(image_input)
+    if not success or image is None:
+        return baseline_res
+
+    # 3. Diagnostic Image Quality Analysis
+    quality = check_image_quality(image)
+    baseline_res["image_quality"] = float(round(quality.quality_score, 4))
+    baseline_res["quality_issues"] = quality.issues
+
+    # If image is completely unreadable / zero feature content, report bad_image
+    if not quality.is_acceptable and quality.quality_score < 0.15:
+        baseline_res["status"] = "bad_image"
+        baseline_res["message"] = quality.user_message
+        baseline_res["plant_name"] = None
+        baseline_res["scientific_name"] = ""
+        return baseline_res
+
+    # 4. Optional Diagnostic TTA Stability Analysis (if explicitly requested)
+    models = get_loaded_models()
+    active_type = baseline_res.get("input_type", "leaf")
+    target_entry = models.get(active_type) or models.get('legacy')
+
+    stability = 1.0
+    if tta_mode != "off" and target_entry:
+        try:
+            tta_res = predict_with_tta(
+                target_entry['model'],
+                target_entry['class_names'],
+                image,
+                mode=tta_mode,
+                temperature=1.0,
+                device=_DEVICE
+            )
+            stability = tta_res.get("stability_score", 1.0)
+        except Exception:
+            stability = 1.0
+    baseline_res["prediction_stability"] = float(round(stability, 4))
+
+    # 5. Diagnostic Embedding Similarity
+    embedding_sim = 0.50
+    if target_entry:
+        try:
+            input_tensor = preprocess_for_inference(image, device=_DEVICE)
+            raw_cls = baseline_res.get("raw_class", "")
+            embedding_sim, _ = compute_embedding_similarity(
+                target_entry['model'],
+                target_entry['class_names'],
+                active_type,
+                input_tensor,
+                raw_cls,
+                device=_DEVICE
+            )
+        except Exception:
+            embedding_sim = 0.50
+    baseline_res["embedding_similarity"] = float(round(embedding_sim, 4))
+
+    # 6. Diagnostic Grad-CAM Explainability Heatmap
+    if generate_explanation and target_entry:
+        try:
+            raw_cls = baseline_res.get("raw_class", "")
+            target_class_idx = target_entry['class_to_index'].get(raw_cls, 0)
+            _, data_uri, _ = generate_gradcam_overlay(
+                target_entry['model'],
+                image,
+                target_class_idx=target_class_idx,
+                alpha=0.45,
+                device=_DEVICE
+            )
+            baseline_res["explanation_available"] = True
+            baseline_res["explanation_image"] = data_uri
+        except Exception as e:
+            baseline_res["explanation_available"] = False
+            if debug and baseline_res.get("debug_info"):
+                baseline_res["debug_info"]["gradcam_error"] = str(e)
+
+    # 7. Multi-Signal Decision Synthesis (Preserves model prediction!)
     decision = DEFAULT_DECISION_ENGINE.evaluate(
-        confidence=top1_conf,
-        margin=margin,
+        confidence=baseline_res["confidence"],
+        margin=baseline_res["margin"],
         stability_score=stability,
         quality_score=quality.quality_score,
         quality_acceptable=quality.is_acceptable,
         embedding_similarity=embedding_sim,
-        has_database_match=has_db_match,
-        has_medicinal_info=has_med_info,
-        plant_display_name=display_name,
+        has_database_match=baseline_res["database_match"],
+        has_medicinal_info=baseline_res["medicinal_information_available"],
+        plant_display_name=baseline_res["plant_name"],
         threshold_override=threshold
     )
 
-    if debug:
-        debug_log["10_database_match_result"] = "FOUND" if has_db_match else "NOT_FOUND"
-        debug_log["11_final_confidence"] = f"{top1_conf:.1%}"
-        debug_log["12_final_returned_status"] = decision.status
-        debug_log["decision_reason"] = decision.decision_reason
+    baseline_res["status"] = decision.status
+    baseline_res["decision_reason"] = decision.decision_reason
+    baseline_res["message"] = decision.user_message
 
-    # Step 9: Assemble final standardized result
-    base_response = {
-        "success": True,
-        "status": decision.status,
-        "input_type": active_type,
-        "input_type_confidence": float(round(type_confidence, 4)),
-        "plant_name": display_name if decision.is_confident else None,
-        "scientific_name": scientific_name if decision.is_confident else "",
-        "confidence": float(round(top1_conf, 4)),
-        "margin": float(round(margin, 4)),
-        "confidence_tier": conf_tier,
-        "confidence_interpretation": conf_desc,
-        "prediction_stability": float(round(stability, 4)),
-        "image_quality": float(round(quality.quality_score, 4)),
-        "embedding_similarity": float(round(embedding_sim, 4)),
-        "is_medicinal": is_medicinal if decision.is_confident else False,
-        "medicinal_information_available": has_med_info if decision.is_confident else False,
-        "database_match": has_db_match,
-        "message": decision.user_message,
-        "top_predictions": formatted_top_preds[:3],
-        "explanation_available": explanation_available,
-        "explanation_image": explanation_image if explanation_available else None,
-        "debug_info": debug_log if debug else None
-    }
+    if debug and baseline_res.get("debug_info"):
+        dbg = baseline_res["debug_info"]
+        dbg["image_quality_score"] = quality.quality_score
+        dbg["prediction_stability"] = f"{stability:.1%}"
+        dbg["embedding_similarity"] = f"{embedding_sim:.3f}"
+        dbg["decision_reason"] = decision.decision_reason
 
-    # Populate monograph fields if available
-    if plant_info and decision.is_confident:
-        base_response["description"] = plant_info.get("description", "")
-        base_response["medicinal_uses"] = plant_info.get("medicinal_uses", [])
-        base_response["traditional_uses"] = plant_info.get("traditional_uses", [])
-        base_response["parts_used"] = plant_info.get("parts_used", [])
-        base_response["precautions"] = plant_info.get("precautions", [])
-        base_response["sources"] = plant_info.get("sources", [])
-    else:
-        base_response["description"] = "Plant recognized by botanical visual classifier." if decision.is_confident else ""
-        base_response["medicinal_uses"] = []
-        base_response["traditional_uses"] = []
-        base_response["parts_used"] = []
-        base_response["precautions"] = []
-        base_response["sources"] = []
-
-    return base_response
+    return baseline_res

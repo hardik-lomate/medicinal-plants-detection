@@ -1,0 +1,4 @@
+model,samples_evaluated,baseline_accuracy,modified_accuracy,difference,baseline_macro_f1,modified_macro_f1,baseline_top3,modified_top3,number_of_changed_predictions,number_of_regressions,number_of_improvements,verdict
+image_type,200,0.99,0.99,0.0,0.99,0.99,1.0,1.0,0,0,0,RETAIN_MODIFICATION
+whole_plant,200,0.945,0.945,0.0,0.8267,0.8267,0.99,0.99,0,0,0,RETAIN_MODIFICATION
+leaf,200,0.895,0.895,0.0,0.8211,0.8211,0.97,0.97,0,0,0,RETAIN_MODIFICATION

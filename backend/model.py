@@ -3,18 +3,12 @@ backend/model.py
 =================
 Unified Model Loading, Multi-Stage Inference, and Database Integration Interface.
 
-Refactored to route through the modular `inference` package while maintaining
-100% backward compatibility for all existing Flask routes, CLI scripts, and tests.
-
-Core capabilities:
-- Aspect-ratio preserving image loading & sanitization
-- Pre-classification image quality validation
-- Test-Time Augmentation (TTA) with cross-perspective voting
-- Deep feature embedding extraction and centroid cosine similarity
-- Temperature-scaled confidence calibration
-- Multi-signal uncertainty & out-of-distribution (OOD) rejection
-- Grad-CAM visual attention heatmaps
-- Canonical botanical name normalization & SQLite monograph retrieval
+Primary Architecture:
+- Exact-parity baseline inference matching trained model evaluations
+- Authoritative prediction preservation (model argmax is authoritative)
+- Aspect-ratio & EXIF-safe image loading
+- Optional diagnostic signals (Grad-CAM, image quality, embedding similarity)
+- Botanical name normalization & SQLite monograph retrieval
 """
 
 import os
@@ -44,6 +38,7 @@ from inference.preprocessing import (
 )
 from inference.quality import check_image_quality as check_img_qual
 from inference.engine import (
+    predict_baseline,
     predict_pipeline,
     get_loaded_models,
     normalize_plant_name,
@@ -78,6 +73,22 @@ def init_model():
     get_loaded_models()
 
 
+def predict_baseline_image(
+    image_input: Union[str, Path, bytes, Image.Image, Any],
+    forced_type: Optional[str] = None,
+    debug: bool = False
+) -> Dict[str, Any]:
+    """
+    Step 1 Pure Baseline Inference interface.
+    Executes single forward pass without secondary heuristics.
+    """
+    return predict_baseline(
+        image_input=image_input,
+        forced_type=forced_type,
+        debug=debug
+    )
+
+
 def predict_image(
     image_input: Union[str, Path, bytes, Image.Image, Any],
     forced_type: Optional[str] = None,
@@ -85,13 +96,13 @@ def predict_image(
     threshold: Optional[float] = None
 ) -> Dict[str, Any]:
     """
-    Unified prediction interface.
-    Delegates to inference.predict_pipeline with fast TTA and explainability.
+    Unified prediction interface for web server, CLI, and real-world evaluation.
+    Uses authoritative baseline classification with diagnostic explainability.
     """
     return predict_pipeline(
         image_input=image_input,
         forced_type=forced_type,
-        tta_mode="fast",
+        tta_mode="off",
         generate_explanation=True,
         debug=debug,
         threshold=threshold
